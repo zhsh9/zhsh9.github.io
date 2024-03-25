@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    zhsh
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
+<meta name="author" content="zhsh">
+<meta name="description" content="move fast and break things">
+<meta name="keywords" content="zhsh,zhsh9,security">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://zhsh9.info/styles/main.css" />
+<link href="https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://fastly.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://zhsh9.info">
+                    zhsh
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        Home
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        Blog
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        Tag
+                    </a>
+                    
+                    <a class="menu-item" href="https://htbwp.readthedocs.io/en/latest/">
+                        HackTheBox
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        About
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1711375148653" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://zhsh9.info">
+                            zhsh
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1711375148653" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            Home
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            Blog
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            Tag
+                        </a>
+                        
+                        <a class="menu-item" href="https://htbwp.readthedocs.io/en/latest/">
+                            HackTheBox
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            About
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+    
+    <div id="tp-weather-widget"></div>
+    <script>
+      (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+      window.SeniverseWeatherWidget('show', {
+        flavor: "slim",
+        location: "WX4FBXXFKE4F",
+        geolocation: true,
+        language: "en",
+        unit: "c",
+        theme: "auto",
+        token: "a44a1d0f-abbb-4739-a53e-603c97094c4c",
+        hover: "disabled",
+        container: "tp-weather-widget"
+      });
+      var cnt = document.getElementsByClassName('sw-card-slim-container');
+      cnt.classList.add('ignore-css');
+    </script>
+
+
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                Data Structure in C
+                            </h1>
+                            
+                                <!--en-->
+                                <div class="post-meta en">
+                                    Author:
+                                    <a itemprop="author" rel="author" href="/">
+                                        zhsh
+                                    </a>
+                                    <span class="post-time">
+                                Date: <a href="#">2022-03-16</a>
+                            </span>
+                                    <span class="post-readtime">Reading Time:<a
+                                    href="#">6.8
+                                    mins</a></span>
+                                    <span class="post-words">words:<a href="#">1086</a></span>
+                                    
+                                        <span class="post-category">
+                                Category:
+                                
+                                <a href="https://zhsh9.info/tag/1UtwLPxq0/">Data Structure</a>
+                                
+                            </span>
+                                        
+                                </div>
+                                
+                        </header>
+                        
+                        <div class="post-content">
+                            <h1 id="sequential-list">Sequential List</h1>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define DATA_TYPE int
+
+// Definition.
+typedef struct Vector {
+	DATA_TYPE *data;
+	int size, length;
+} Vector;
+
+// Construct a vector whose size is n.
+Vector *init(int n) {
+	Vector *vec = (Vector *)malloc(sizeof(Vector));
+	vec-&gt;data = (int *)malloc(sizeof(DATA_TYPE) * n);
+	vec-&gt;size = n;
+	vec-&gt;length = 0;
+	return vec;
+}
+
+// Destruct a vector.
+void clear(Vector *vec) {
+	if (vec == NULL) return;
+	free(vec-&gt;data);
+	free(vec);
+}
+
+// Expand a vector.
+// return 0: expand failure.
+// return 1: expand success.
+int expand(Vector *vec) {
+	// Secure Ways to use realloc, avoid memory leaking.
+	int new_size = vec-&gt;size * 2;
+	DATA_TYPE *p = (DATA_TYPE *)realloc(vec-&gt;data, sizeof(vec-&gt;data) * new_size);
+	if (p == NULL) return 0;
+	vec-&gt;size = new_size;
+	vec-&gt;data = p;
+	return 1;
+}
+
+// Insert an item into vector.
+// return 0: insert failure.
+// return 1: insert success.
+int insert(Vector *vec, int pos, DATA_TYPE val) {
+	// 3 illegal inserting cases.
+	if (vec == NULL) return 0;
+	if (vec-&gt;length == vec-&gt;size) {
+		if (!expand(vec)) return 0;
+		printf(&quot;expand vector size to %d success\n&quot;, vec-&gt;size);
+	}
+	if (pos &lt; 0 || pos &gt; vec-&gt;length) return 0;
+
+	for (int i = vec-&gt;length; i &gt; pos; --i) {
+		vec-&gt;data[i] = vec-&gt;data[i-1];
+	}
+	vec-&gt;data[pos] = val;
+	vec-&gt;length += 1;
+	return 1;
+}
+
+// Delete an item in vector.
+// return 0: delete failure.
+// return 1: delete success.
+int del(Vector *vec, int pos) {
+	// 3 illegal deleting cases.
+	if (vec == NULL) return 0;
+	if (vec-&gt;length == 0) return 0;
+	if (pos &lt; 0 || pos &gt; vec-&gt;length-1) return 0;
+
+	for (int i = pos; i &lt; vec-&gt;length-1; ++i) {
+		vec-&gt;data[i] = vec-&gt;data[i+1];
+	}
+	vec-&gt;length -= 1;
+	return 1;
+}
+
+// Print out a vector.
+void print(Vector *vec) {
+	printf(&quot;Vector(%d) = [&quot;, vec-&gt;length);
+	for (int i = 0; i &lt; vec-&gt;length; ++i) {
+		if (i != 0) printf(&quot;, &quot;);
+		printf(&quot;%d&quot;, vec-&gt;data[i]);
+	}
+	printf(&quot;]\n&quot;);
+}
+</code></pre>
+<h1 id="link-list">Link List</h1>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define DATA_TYPE int
+
+// Define data structure: link list node.
+typedef struct ListNode
+{
+    DATA_TYPE data;
+    struct ListNode *next;
+} ListNode;
+
+// Define data structure: link list.
+typedef struct LinkList
+{
+    ListNode head;
+    int length;
+} LinkList;
+
+// Initialize a link list node, returning a pointer to list node.
+ListNode *init_listnode(DATA_TYPE val)
+{
+    ListNode *p = (ListNode *)malloc(sizeof(ListNode));
+    if (p == NULL)
+        return NULL;
+    p-&gt;data = val;
+    p-&gt;next = NULL;
+    return p;
+}
+
+// Initialize a link list, returnning a link list.
+LinkList *init_linklist()
+{
+    LinkList *l = (LinkList *)malloc(sizeof(LinkList));
+    if (l == NULL)
+        return NULL;
+    l-&gt;head.next = NULL;
+    l-&gt;length = 0;
+    return l;
+}
+
+// Destruct link list node.
+void clear_listnode(ListNode *p)
+{
+    if (p == NULL)
+        return;
+    free(p);
+    return;
+}
+
+// Destruct link list.
+void clear_linklist(LinkList *l)
+{
+    if (l == NULL)
+        return;
+    ListNode *p = l-&gt;head.next, *q;
+    while (p)
+    {
+        q = p-&gt;next;
+        clear_listnode(p);
+        p = q;
+    }
+    free(l);
+    return;
+}
+
+// Insert a link list node.
+// return 0, inserting fail.
+// return 1, inserting success.
+int insert(LinkList *l, int ind, DATA_TYPE val)
+{
+    if (l == NULL)
+        return 0;
+    if (ind &lt; 0 || ind &gt; l-&gt;length)
+        return 0;
+    ListNode *p = &amp;(l-&gt;head), *node = init_listnode(val);
+    while (ind--)
+        p = p-&gt;next;
+
+    node-&gt;next = p-&gt;next;
+    p-&gt;next = node;
+    l-&gt;length += 1;
+    return 1;
+}
+
+// Erase a link list node.
+// return 0, erasing fail.
+// return 1, erasing success.
+int erase(LinkList *l, int ind)
+{
+    if (l == NULL)
+        return 0;
+    if (ind &lt; 0 || ind &gt; l-&gt;length - 1)
+        return 0;
+    ListNode *p = &amp;(l-&gt;head), *q;
+    while (ind--)
+        p = p-&gt;next;
+
+    q = p-&gt;next;
+    p-&gt;next = p-&gt;next-&gt;next;
+    clear_listnode(q);
+    l-&gt;length -= 1;
+    return 1;
+}
+
+// Print out link list.
+void output(LinkList *l)
+{
+    printf(&quot;LinkList(%d): &quot;, l-&gt;length);
+    for (ListNode *p = l-&gt;head.next; p; p = p-&gt;next)
+        printf(&quot;%d -&gt; &quot;, p-&gt;data);
+    printf(&quot;NULL\n&quot;);
+    return;
+}
+</code></pre>
+<h1 id="queue">Queue</h1>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define DATA_TYPE int
+
+typedef struct Queue
+{
+    DATA_TYPE *data;
+    int head, tail;
+    int size, len;
+} Queue;
+
+Queue *init(int n) {
+    Queue * que = (Queue *)malloc(sizeof(Queue));
+    que-&gt;data = (DATA_TYPE *)malloc(sizeof(int) * n);
+    que-&gt;len = que-&gt;head = que-&gt;tail = 0;
+    que-&gt;size = n;
+    return que;
+}
+
+void clear(Queue *que) {
+    if (que == NULL) return;
+    free(que-&gt;data);
+    free(que);
+    return;
+}
+
+int empty(Queue *que) {
+    return que-&gt;len == 0;
+}
+
+DATA_TYPE front(Queue *que) {
+    return que-&gt;data[que-&gt;head];
+}
+
+int push(Queue *que, DATA_TYPE val) {
+    if (que == NULL) return 0;
+    if (que-&gt;len == que-&gt;size) return 0;
+    que-&gt;data[que-&gt;tail++] = val;
+    que-&gt;tail %= que-&gt;size;
+    que-&gt;len++;
+    return 1;
+}
+
+int pop(Queue *que) {
+    if (que == NULL) return 0;
+    if (empty(que)) return 0;
+    que-&gt;head %= (que-&gt;head + 1);
+    que-&gt;len--;
+    return 1;
+}
+
+void output(Queue *que) {
+    printf(&quot;queue = [&quot;);
+    for (int head = que-&gt;head, i = 0; i &lt; que-&gt;len; ++i) {
+        int ind = (head + i) % que-&gt;size;
+        printf(&quot;%d&quot;, que-&gt;data[ind]);
+        if (ind != que-&gt;tail-1) printf(&quot;, &quot;);
+        else printf(&quot;]\n&quot;);
+    }
+}
+</code></pre>
+<h1 id="stack">Stack</h1>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define DATA_TYPE int
+
+typedef struct Stack {
+    DATA_TYPE *data;
+    int top, size;
+} Stack;
+
+Stack *init(int n) {
+    Stack *sta = (Stack *)malloc(sizeof(Stack));
+    sta-&gt;data = (DATA_TYPE *)malloc(sizeof(DATA_TYPE) * n);
+    sta-&gt;size = n;
+    sta-&gt;top = -1;
+    return sta;
+}
+
+void clear(Stack *sta) {
+    if (sta == NULL) return;
+    free(sta-&gt;data);
+    free(sta);
+    return;
+}
+
+int empty(Stack *sta) {
+    if (sta == NULL) return NULL;
+    return sta-&gt;top == -1;
+}
+
+int top(Stack *sta) {
+    if (sta == NULL) return NULL;
+    if (empty(sta)) return NULL;
+    return sta-&gt;data[sta-&gt;top];
+}
+
+int push(Stack *sta, DATA_TYPE val) {
+    if (sta == NULL) return 0;
+    if (sta-&gt;top == sta-&gt;size - 1) return 0;
+    sta-&gt;data[++sta-&gt;top] = val;
+    return 1;
+}
+
+int pop(Stack *sta) {
+    if (sta == NULL) return 0;
+    if (empty(sta)) return 0;
+    sta-&gt;top--;
+    return 1;
+}
+
+void output(Stack *sta) {
+    printf(&quot;stack(%d) = [&quot;, sta-&gt;top + 1);
+    for (int i = 0; i &lt; sta-&gt;top + 1; i++) {
+        printf(&quot;%d&quot;, sta-&gt;data[i]);
+        if (i != sta-&gt;top) printf(&quot;, &quot;);
+        else printf(&quot;]&quot;);
+    }
+}
+</code></pre>
+
+                        </div>
+                        
+                            <div class="post-toc">
+                                <ul class="markdownIt-TOC">
+<li><a href="#sequential-list">Sequential List</a></li>
+<li><a href="#link-list">Link List</a></li>
+<li><a href="#queue">Queue</a></li>
+<li><a href="#stack">Stack</a></li>
+</ul>
+
+                            </div>
+                            
+                                
+                                    
+                                        <!--en-->
+                                        <section class="post-copyright en">
+                                            <p class="copyright-item">
+                                                <span>Author:</span>
+                                                <span>zhsh</span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>Permalink:</span>
+                                                <span><a href="https://zhsh9.info/post/I404HkphT/">https://zhsh9.info/post/I404HkphT/</a></span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>License:</span>
+                                                <span>MIT License</span>
+                                            </p>
+                                        </section>
+                                        
+                                                
+                                                    
+                                                        <!-- Share-->
+                                                        <span style="margin-right:15px">
+                                                    <i class="post-share"></i>
+                                                    <span>Share:</span>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://zhsh9.info/post/I404HkphT/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zhsh9.info/post/I404HkphT/&sharesource=qzone&title=Data Structure in C&pics=https://zhsh9.info/images/avatar.png?v=1711375148653&summary="><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://zhsh9.info/post/I404HkphT/&sharesource=weibo&title=Data Structure in C + " - " + &pic="https://zhsh9.info/images/avatar.png?v=1711375148653 "><i class="fa fa-weibo "></i></a>
+                                                        
+                                                                </span>
+                                                                <!--en-->
+                                                                <section class="post-tags en ">
+                                                                    <div>
+                                                                        <span>Tag(s):</span>
+                                                                        <span class="tag ">
+                        
+                        
+                        <a href="https://zhsh9.info/tag/1UtwLPxq0/">#
+                                                Data Structure
+                                                    </a>
+                                                    
+                                                        
+                                                            </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <a href="javascript:window.history.back();">back</a>
+                                                                        <span>&dot;</span>
+                                                                        <a href="#">home</a>
+                                                                    </div>
+                                                                </section>
+                                                                
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://zhsh9.info/post/SIPZQTxzc/">
+                                                                                            NKUCS OJ Problems: 	Advanced Language Programming
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://zhsh9.info/post/JEOBoEHyt/">
+                                                                                                    Challenge 2. orw (pwnable.tw)
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                    
+                        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container" style="width: 100%;max-width: 780px;margin: auto;"></div>
+
+<script>
+    var gitalk = new Gitalk({
+        clientID: '11cf267617fbe2c71c94',
+        clientSecret: '3954c3a0371c9a9927394d5f3c259c3239ce6c69',
+        repo: 'zhsh9.github.io',
+        owner: 'zhsh9',
+        admin: ['zhsh9'],
+        id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+        distractionFreeMode: false // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+</script>
+                            
+                                        
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+                            
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        zhsh &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+                <script>
+                    
+                    
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1711375148653);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

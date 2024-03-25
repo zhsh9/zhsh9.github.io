@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    zhsh
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
+<meta name="author" content="zhsh">
+<meta name="description" content="move fast and break things">
+<meta name="keywords" content="zhsh,zhsh9,security">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://zhsh9.info/styles/main.css" />
+<link href="https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://fastly.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://zhsh9.info">
+                    zhsh
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        Home
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        Blog
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        Tag
+                    </a>
+                    
+                    <a class="menu-item" href="https://htbwp.readthedocs.io/en/latest/">
+                        HackTheBox
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        About
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1711375148653" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://zhsh9.info">
+                            zhsh
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1711375148653" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            Home
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            Blog
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            Tag
+                        </a>
+                        
+                        <a class="menu-item" href="https://htbwp.readthedocs.io/en/latest/">
+                            HackTheBox
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            About
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+    
+    <div id="tp-weather-widget"></div>
+    <script>
+      (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+      window.SeniverseWeatherWidget('show', {
+        flavor: "slim",
+        location: "WX4FBXXFKE4F",
+        geolocation: true,
+        language: "en",
+        unit: "c",
+        theme: "auto",
+        token: "a44a1d0f-abbb-4739-a53e-603c97094c4c",
+        hover: "disabled",
+        container: "tp-weather-widget"
+      });
+      var cnt = document.getElementsByClassName('sw-card-slim-container');
+      cnt.classList.add('ignore-css');
+    </script>
+
+
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                Port Forwarding: ssh &amp; chisel &amp; meterpreter
+                            </h1>
+                            
+                                <!--en-->
+                                <div class="post-meta en">
+                                    Author:
+                                    <a itemprop="author" rel="author" href="/">
+                                        zhsh
+                                    </a>
+                                    <span class="post-time">
+                                Date: <a href="#">2024-02-11</a>
+                            </span>
+                                    <span class="post-readtime">Reading Time:<a
+                                    href="#">6.1
+                                    mins</a></span>
+                                    <span class="post-words">words:<a href="#">972</a></span>
+                                    
+                                        <span class="post-category">
+                                Category:
+                                
+                                <a href="https://zhsh9.info/tag/0cvDgZszV/">PWK</a>
+                                
+                            </span>
+                                        
+                                </div>
+                                
+                        </header>
+                        
+                        <div class="post-content">
+                            <h1 id="ssh">ssh</h1>
+<p>SSH port forwarding allows you to forward a specified network port over an SSH connection to another port. This feature is often used to protect data transmission through SSH, access internal network resources, and more.</p>
+<p>There are three main types of SSH port forwarding:</p>
+<ol>
+<li><strong>Local Port Forwarding</strong> - Forwards a port from the local machine to a specified port on the SSH server.</li>
+<li><strong>Remote Port Forwarding</strong> - Forwards a port from the SSH server to a specified port on the local machine or another machine.</li>
+<li><strong>Dynamic Port Forwarding</strong> - Typically used to set up a SOCKS proxy.</li>
+</ol>
+<p>If you want to enable port forwarding without opening an interactive shell, you can use the <code>-N</code> flag. This flag tells the SSH client not to execute a remote command.</p>
+<h2 id="local-port-forwarding">Local Port Forwarding</h2>
+<p>Local port forwarding allows you to forward a local port to a specified port on a remote server. For example, if you want to forward your local port 8080 to port 80 on a remote server via SSH, you could do this:</p>
+<pre><code class="language-sh">ssh -L 8080:localhost:80 -N -f user@remotehost
+</code></pre>
+<p>Here:</p>
+<ul>
+<li><code>-L 8080:localhost:80</code> indicates that local port 8080 is forwarded to port 80 on the SSH server.</li>
+<li><code>-N</code> indicates not to execute remote commands (i.e., not to open a remote shell).</li>
+<li><code>-f</code> indicates to run the SSH client in the background after executing the command.</li>
+</ul>
+<h2 id="remote-port-forwarding">Remote Port Forwarding</h2>
+<p>Remote port forwarding is where a port on the SSH server is forwarded to a specified port on the local machine or another server. If you want to forward port 9090 on a remote server to port 9090 on your local machine, you can do this:</p>
+<pre><code class="language-sh">ssh -R 9090:localhost:9090 -N -f user@remotehost
+</code></pre>
+<p>Here:</p>
+<ul>
+<li><code>-R 9090:localhost:9090</code> indicates that the remote server's port 9090 is forwarded to the local port 9090.</li>
+<li>The other parameters are the same as local port forwarding.</li>
+</ul>
+<h2 id="dynamic-port-forwarding">Dynamic Port Forwarding</h2>
+<p>Dynamic port forwarding creates a SOCKS proxy server that you can use to proxy TCP connections. To start a SOCKS proxy server listening on a local port, the command is as follows:</p>
+<pre><code class="language-sh">ssh -D 1080 -N -f user@remotehost
+# /etc/proxychains4.conf: socks4 127.0.0.1 1080
+proxychains evil-winrm -i &lt;ip&gt; -u &lt;username&gt; -p &lt;password&gt;
+</code></pre>
+<p>Here:</p>
+<ul>
+<li><code>-D 1080</code> indicates the creation of a SOCKS server on the local port 1080.</li>
+<li>The other parameters are the same as above.</li>
+</ul>
+<p><strong>Note</strong>: To use SSH port forwarding, you need to ensure that port forwarding is allowed in the SSH server's configuration file (usually <code>/etc/ssh/sshd_config</code>). For remote port forwarding, it is often necessary to set <code>GatewayPorts</code> to <code>yes</code>.</p>
+<h2 id="ssh-command-line">ssh command line</h2>
+<pre><code class="language-console">$ ~C
+ssh&gt; -L 8080:localhost:80
+</code></pre>
+<p>To use this command, you usually need to press the Enter key first and then type ~C, making sure that ~ is the first character. This opens a small SSH command-line interface. In this interface, you can enter commands such as:</p>
+<ul>
+<li>-L [bind_address:]port:host:hostport: Add local port forwarding.</li>
+<li>-R [bind_address:]port:host:hostport: Add remote port forwarding.</li>
+<li>-D [bind_address:]port: Add dynamic port forwarding (SOCKS proxy).</li>
+<li>-KL [bind_address:]port: Cancel local port forwarding.</li>
+<li>-KR [bind_address:]port: Cancel remote port forwarding.</li>
+<li>-KD [bind_address:]port: Cancel dynamic port forwarding.<br>
+After the ssh&gt; prompt, if you enter something like -L 8080:localhost:80, it will forward port 8080 on your local machine to port 80 on the SSH server.</li>
+</ul>
+<p>If, when you try to open the command-line interface within an SSH session (by typing ~C), you see the message &quot;commandline disable,&quot; it usually means that the SSH client has been configured to disable this feature. This configuration may be for security reasons or to prevent users from modifying the session's forwarding settings.</p>
+<p>To resolve this issue, you need to investigate and change the SSH client's configuration. Here are some possible methods:</p>
+<p>Check the SSH client configuration files (~/.ssh/config or /etc/ssh/ssh_config): Look for configuration directives that may affect this behavior, such as NoEscape or EscapeChar, and adjust them accordingly. Generally, setting EscapeChar to none or to a non-default value might cause this issue.</p>
+<h1 id="chisel">chisel</h1>
+<h2 id="chisel-server-side">chisel server side</h2>
+<p>First, you need to set up a Chisel server on a machine that is accessible from both the client (the machine from which you want to access the remote service) and the target (the machine hosting the service you want to access).</p>
+<p>To start the server, the command is as follows:</p>
+<pre><code class="language-sh">./chisel server --port 8080 --reverse
+</code></pre>
+<p>This command starts a Chisel server listening on port 8080 and allows clients to establish reverse tunnels.</p>
+<h2 id="chisel-client-side">chisel client side</h2>
+<p>On the client machine, download the Chisel binary just as you did for the server.</p>
+<p>Assuming you want to access a remote service on target-machine which is listening on port target-port and you want to access it on your local machine as local-port, the command is as follows:</p>
+<pre><code class="language-sh">./chisel client server-address:server-port R:local-port:target-machine:target-port
+</code></pre>
+<h1 id="meterpreter">meterpreter</h1>
+<p>The portfwd function allows attackers to forward network traffic within a Meterpreter session, enabling access to services on the target network that are normally inaccessible. This feature is particularly useful during penetration tests and system security assessments when attackers need to access restricted or internal services on a network.</p>
+<p>port forward adding allows traffic to be forwarded from the attacker's machine (or a pivot machine) to systems on the target network. This way, the attacker can access services within the target network from their own machine.</p>
+<pre><code class="language-sh">portfwd add -l [local port] -p [target port] -r [target address]
+</code></pre>
+<p>The add command creates a port forward that listens on a local port -l on the system where Meterpreter is running and forwards all traffic to the target address -r on the target port -p.</p>
+
+                        </div>
+                        
+                            <div class="post-toc">
+                                <ul class="markdownIt-TOC">
+<li><a href="#ssh">ssh</a>
+<ul>
+<li><a href="#local-port-forwarding">Local Port Forwarding</a></li>
+<li><a href="#remote-port-forwarding">Remote Port Forwarding</a></li>
+<li><a href="#dynamic-port-forwarding">Dynamic Port Forwarding</a></li>
+<li><a href="#ssh-command-line">ssh command line</a></li>
+</ul>
+</li>
+<li><a href="#chisel">chisel</a>
+<ul>
+<li><a href="#chisel-server-side">chisel server side</a></li>
+<li><a href="#chisel-client-side">chisel client side</a></li>
+</ul>
+</li>
+<li><a href="#meterpreter">meterpreter</a></li>
+</ul>
+
+                            </div>
+                            
+                                
+                                    
+                                        <!--en-->
+                                        <section class="post-copyright en">
+                                            <p class="copyright-item">
+                                                <span>Author:</span>
+                                                <span>zhsh</span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>Permalink:</span>
+                                                <span><a href="https://zhsh9.info/post/BhKW5VPLb/">https://zhsh9.info/post/BhKW5VPLb/</a></span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>License:</span>
+                                                <span>MIT License</span>
+                                            </p>
+                                        </section>
+                                        
+                                                
+                                                    
+                                                        <!-- Share-->
+                                                        <span style="margin-right:15px">
+                                                    <i class="post-share"></i>
+                                                    <span>Share:</span>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://zhsh9.info/post/BhKW5VPLb/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zhsh9.info/post/BhKW5VPLb/&sharesource=qzone&title=Port Forwarding: ssh &amp; chisel &amp; meterpreter&pics=https://zhsh9.info/images/avatar.png?v=1711375148653&summary="><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://zhsh9.info/post/BhKW5VPLb/&sharesource=weibo&title=Port Forwarding: ssh &amp; chisel &amp; meterpreter + " - " + &pic="https://zhsh9.info/images/avatar.png?v=1711375148653 "><i class="fa fa-weibo "></i></a>
+                                                        
+                                                                </span>
+                                                                <!--en-->
+                                                                <section class="post-tags en ">
+                                                                    <div>
+                                                                        <span>Tag(s):</span>
+                                                                        <span class="tag ">
+                        
+                        
+                        <a href="https://zhsh9.info/tag/0cvDgZszV/">#
+                                                PWK
+                                                    </a>
+                                                    
+                                                        
+                                                            </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <a href="javascript:window.history.back();">back</a>
+                                                                        <span>&dot;</span>
+                                                                        <a href="#">home</a>
+                                                                    </div>
+                                                                </section>
+                                                                
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://zhsh9.info/post/slbGobOio/">
+                                                                                            Install BloodHound on Windows
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://zhsh9.info/post/ti322t9qo/">
+                                                                                                    Linux PAM 1.1.0 - MOTD File Tampering Privilege Escalation
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                    
+                        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container" style="width: 100%;max-width: 780px;margin: auto;"></div>
+
+<script>
+    var gitalk = new Gitalk({
+        clientID: '11cf267617fbe2c71c94',
+        clientSecret: '3954c3a0371c9a9927394d5f3c259c3239ce6c69',
+        repo: 'zhsh9.github.io',
+        owner: 'zhsh9',
+        admin: ['zhsh9'],
+        id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+        distractionFreeMode: false // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+</script>
+                            
+                                        
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+                            
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        zhsh &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+                <script>
+                    
+                    
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1711375148653);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

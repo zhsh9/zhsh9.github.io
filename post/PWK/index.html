@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    zhsh
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
+<meta name="author" content="zhsh">
+<meta name="description" content="move fast and break things">
+<meta name="keywords" content="zhsh,zhsh9,security">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://zhsh9.info/styles/main.css" />
+<link href="https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://fastly.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://zhsh9.info">
+                    zhsh
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        Home
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        Blog
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        Tag
+                    </a>
+                    
+                    <a class="menu-item" href="https://htbwp.readthedocs.io/en/latest/">
+                        HackTheBox
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        About
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1711375148653" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://zhsh9.info">
+                            zhsh
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1711375148653" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            Home
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            Blog
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            Tag
+                        </a>
+                        
+                        <a class="menu-item" href="https://htbwp.readthedocs.io/en/latest/">
+                            HackTheBox
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            About
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+    
+    <div id="tp-weather-widget"></div>
+    <script>
+      (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+      window.SeniverseWeatherWidget('show', {
+        flavor: "slim",
+        location: "WX4FBXXFKE4F",
+        geolocation: true,
+        language: "en",
+        unit: "c",
+        theme: "auto",
+        token: "a44a1d0f-abbb-4739-a53e-603c97094c4c",
+        hover: "disabled",
+        container: "tp-weather-widget"
+      });
+      var cnt = document.getElementsByClassName('sw-card-slim-container');
+      cnt.classList.add('ignore-css');
+    </script>
+
+
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                Pentest
+                            </h1>
+                            
+                                <!--en-->
+                                <div class="post-meta en">
+                                    Author:
+                                    <a itemprop="author" rel="author" href="/">
+                                        zhsh
+                                    </a>
+                                    <span class="post-time">
+                                Date: <a href="#">2023-05-19</a>
+                            </span>
+                                    <span class="post-readtime">Reading Time:<a
+                                    href="#">4.9
+                                    mins</a></span>
+                                    <span class="post-words">words:<a href="#">1102</a></span>
+                                    
+                                        <span class="post-category">
+                                Category:
+                                
+                                <a href="https://zhsh9.info/tag/0cvDgZszV/">PWK</a>
+                                
+                            </span>
+                                        
+                                </div>
+                                
+                        </header>
+                        
+                        <div class="post-content">
+                            <hr>
+<h1 id="1-recon">1. Recon</h1>
+<h2 id="11-主机发现-端口扫描">1.1 主机发现 &amp; 端口扫描</h2>
+<pre><code class="language-bash"># Using nmap to discover hosts and scan ports.
+nmap -sn $IP/24
+nmap -n -v -Pn -sS -p- --max-retries=1 $IP
+nmap -n -v -Pn -sC -sV -sT -O --min-rate=10000 --max-retries=1 -p $PORTS $IP
+</code></pre>
+<pre><code class="language-bash"># Using ping to discover hosts.
+for i in {1..254};do ping -c 1 -W 1 192.168.0.$i | grep from;done
+</code></pre>
+<pre><code class="language-bash"># Using nc to scan ports.
+nc.traditional -vv -z 172.16.200.131 1-65535 2&gt;&amp;1 | grep -v refused
+
+# Using tcp service to scan ports.
+for i in {1...65535}
+do
+	(echo &lt; /dev/tcp/172.16.200.131/$i) &amp;&gt;/dev/null &amp;&amp; printf &quot;\n[+] Open port: %d\n&quot; &quot;$i&quot; || printf &quot;.&quot;
+done
+</code></pre>
+<h2 id="12-ipv6-scan">1.2 IPV6 scan</h2>
+<pre><code class="language-bash"># Using nmap.
+nmap -6 --min-rate 10000 -p- $IPv6
+
+# http://www.net-snmp.org/docs/man/snmpwalk.html
+snmpwalk -v2c -c public $IP
+</code></pre>
+<h2 id="13-枚举多网卡主机">1.3 枚举多网卡主机</h2>
+<pre><code class="language-bash"># https://github.com/mubix/IOXIDResolver
+python IOXIDResolver.py -t 10.10.11.3
+</code></pre>
+<h2 id="14-os识别">1.4 OS识别</h2>
+<ol>
+<li>Using nmap to detect os: <code>nmap -n -Pn -O $IP</code></li>
+<li>Web exists: Windows大小写不敏感；工具识别</li>
+<li>TTL (不准确):<pre><code> 1、WINDOWS NT/2000, TTL：128
+ 2、WINDOWS 95/98,   TTL：32
+ 3、UNIX,  TTL：255
+ 4、LINUX, TTL：64
+ 5、WIN7,  TTL：64
+</code></pre>
+</li>
+<li>Special ports: 22, 139, 445, 1433, 3389</li>
+</ol>
+<h2 id="15-数据库识别">1.5 数据库识别</h2>
+<p>数据库的不同表示的结构也是不同、写法结构也不一样、所以产生的漏洞也不一样。不同的数据库的攻击方式也不完全一样。</p>
+<ul>
+<li>default pair
+<ol>
+<li>asp + access/mssql</li>
+<li>php + mysql</li>
+<li>aspx + mssql</li>
+<li>jsp + mysql/oracle</li>
+<li>python + mongodb</li>
+</ol>
+</li>
+<li>common port
+<ul>
+<li>SQL
+<ol>
+<li>mysql, 3306</li>
+<li>sqlserver, 1433</li>
+<li>oracle, 1521</li>
+<li>psotgresql</li>
+</ol>
+</li>
+<li>NoSQL
+<ol>
+<li>mongodb, 27017</li>
+<li>redis, 6379</li>
+<li>memcached, 11211</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="16-cdn识别">1.6 CDN识别</h2>
+<ul>
+<li>Online detect
+<ul>
+<li><a href="http://ping.chinaz.com/">http://ping.chinaz.com/</a></li>
+<li><a href="http://ping.aizhan.com/">http://ping.aizhan.com/</a></li>
+<li><a href="http://ce.cloud.360.cn/">http://ce.cloud.360.cn/</a></li>
+<li><a href="https://ip.tool.chinaz.com">https://ip.tool.chinaz.com</a></li>
+<li><a href="https://get-site-ip.com/">https://get-site-ip.com/</a></li>
+<li><a href="https://tools.ipip.net/cdn.php">https://tools.ipip.net/cdn.php</a></li>
+</ul>
+</li>
+<li>Bypass CDN
+<ul>
+<li>可能还需要结合社工，从而找到真实的IP。
+<ol>
+<li>子域名查询：主站做了CDN但是子站没有</li>
+<li>邮件服务查询：邮箱大部分是内部人员访问，量也不大，一般没有CDN</li>
+<li>国外ping IP地址：企业未在国外部署CDN</li>
+<li>遗留文件、扫描全网：例如PHPInfo信息中会遗留出IP地址</li>
+<li>特殊搜索引擎：fofa, shodan, zoomeye, censys, 谛听</li>
+<li>奇特方式：fackcdn, w8fuckcdn, zmap</li>
+</ol>
+</li>
+<li>获取真实IP后绑定指向这个地址。
+<ul>
+<li>更改本地Hosts解析指向文件</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="17-站点搭建分析">1.7 站点搭建分析</h2>
+<ol>
+<li>目录型站点（例如，www.xxx.com/bbs）
+<ul>
+<li>主站的漏洞</li>
+<li>子站的漏洞</li>
+</ul>
+</li>
+<li>端口类站点，shodan扫描</li>
+<li>子域名站点（子域名和域名可能不在一个服务器上）</li>
+<li>类似域名站点（原有域名弃用，但是还能访问；二级or顶级域名更换，旧域名找到突破口）
+<ul>
+<li>社工方式找到相关域名信息</li>
+</ul>
+</li>
+<li>旁注，C段站点（在线工具：<a href="https://www.webscan.cc/">https://www.webscan.cc/</a>）
+<ol>
+<li>旁注：同一个服务器上面存在多个站点、但是你要攻击的是A网站由于各种原因不能完成安全测试。就通过测试B网站进入服务器然后在攻击A网站最终实现目的。</li>
+<li>C段：不同的服务器上面存在不同的网站，通过扫描发现与你渗透测试的是同一个网段最终拿下服务器、然后通过内网渗透的方式拿下渗透服务器。</li>
+</ol>
+</li>
+<li>搭建软件特征站点
+<ul>
+<li>有的网站是借助于第三方的集成搭建工具实现例如：PHPstudy、宝塔等环境这样的集成环境搭建的危害就是泄露了详细的版本信息。</li>
+<li>phpstudy搭建了之后在默认的站点安装了phpmyadmin有的网站没有做安全性直接可以通过用户名：root密码：root 登录进入</li>
+</ul>
+</li>
+</ol>
+<h2 id="18-waf识别">1.8 WAF识别</h2>
+<ol>
+<li><a href="https://github.com/EnableSecurity/wafw00f">wafw00f</a>: <code>wafw00f https://example.com</code></li>
+<li><a href="https://github.com/stamparm/identywaf">identYwaf</a>: <code>python identYwaf.py [options] &lt;host|url&gt;</code></li>
+<li>有些Web站GET Header中留有WAF相关信息</li>
+<li>nmap指纹检测
+<ol>
+<li><code>nmap --script=http-waf-fingerprint</code></li>
+<li><code>nmap --script=http-waf-detec</code></li>
+</ol>
+</li>
+<li>目的：没有识别WAF直接扫描可能导致IP黑名单，识别具体WAF可以有针对性的bypass waf</li>
+</ol>
+<h2 id="19-资产收集">1.9 资产收集</h2>
+<ul>
+<li>GitHub<br>
+监控server酱：http://sc.ftqq.com/3.version<br>
+GitHub项目监控地址：https://github.com/weixiao9188/wechat_push
+<ul>
+<li>收集整理最新exp poc</li>
+<li>发现相关测试目标的资产</li>
+</ul>
+</li>
+<li>查询：子域名、DNS、备案、证书、全球节点请求CDN
+<ul>
+<li>枚举爆破or解析子域名 <a href="https://github.com/bit4woo/teemo">https://github.com/bit4woo/teemo</a></li>
+<li>发现管理员相关的注册信息</li>
+</ul>
+</li>
+<li>搜索引擎：fofa, shodan, zoomeye</li>
+<li>微信公众号接口获取</li>
+<li>内部群内部资源</li>
+</ul>
+<hr>
+<h1 id="2-vulnerabilities">2. Vulnerabilities</h1>
+<h2 id="21-sqli">2.1 SQLi</h2>
+<h2 id="22-file-upload">2.2 File Upload</h2>
+<hr>
+<h1 id="x-privilege-escalation">X. Privilege Escalation</h1>
+<h2 id="x0-reverse-shells">X.0 Reverse Shells</h2>
+<p><a href="../RXOBNgNUj/">Go➡️</a></p>
+<h2 id="x1-a-better-shell">X.1 A Better Shell</h2>
+<pre><code class="language-bash">sudo nc -lvnp $port
+dpkg -l | grep python
+python -c &quot;import pty;pty.spawn('/bin/bash')&quot;
+export TERM=xterm-color
+</code></pre>
+
+                        </div>
+                        
+                            <div class="post-toc">
+                                <ul class="markdownIt-TOC">
+<li><a href="#1-recon">1. Recon</a>
+<ul>
+<li><a href="#11-%E4%B8%BB%E6%9C%BA%E5%8F%91%E7%8E%B0-%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F">1.1 主机发现 &amp; 端口扫描</a></li>
+<li><a href="#12-ipv6-scan">1.2 IPV6 scan</a></li>
+<li><a href="#13-%E6%9E%9A%E4%B8%BE%E5%A4%9A%E7%BD%91%E5%8D%A1%E4%B8%BB%E6%9C%BA">1.3 枚举多网卡主机</a></li>
+<li><a href="#14-os%E8%AF%86%E5%88%AB">1.4 OS识别</a></li>
+<li><a href="#15-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%86%E5%88%AB">1.5 数据库识别</a></li>
+<li><a href="#16-cdn%E8%AF%86%E5%88%AB">1.6 CDN识别</a></li>
+<li><a href="#17-%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA%E5%88%86%E6%9E%90">1.7 站点搭建分析</a></li>
+<li><a href="#18-waf%E8%AF%86%E5%88%AB">1.8 WAF识别</a></li>
+<li><a href="#19-%E8%B5%84%E4%BA%A7%E6%94%B6%E9%9B%86">1.9 资产收集</a></li>
+</ul>
+</li>
+<li><a href="#2-vulnerabilities">2. Vulnerabilities</a>
+<ul>
+<li><a href="#21-sqli">2.1 SQLi</a></li>
+<li><a href="#22-file-upload">2.2 File Upload</a></li>
+</ul>
+</li>
+<li><a href="#x-privilege-escalation">X. Privilege Escalation</a>
+<ul>
+<li><a href="#x0-reverse-shells">X.0 Reverse Shells</a></li>
+<li><a href="#x1-a-better-shell">X.1 A Better Shell</a></li>
+</ul>
+</li>
+</ul>
+
+                            </div>
+                            
+                                
+                                    
+                                        <!--en-->
+                                        <section class="post-copyright en">
+                                            <p class="copyright-item">
+                                                <span>Author:</span>
+                                                <span>zhsh</span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>Permalink:</span>
+                                                <span><a href="https://zhsh9.info/post/PWK/">https://zhsh9.info/post/PWK/</a></span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>License:</span>
+                                                <span>MIT License</span>
+                                            </p>
+                                        </section>
+                                        
+                                                
+                                                    
+                                                        <!-- Share-->
+                                                        <span style="margin-right:15px">
+                                                    <i class="post-share"></i>
+                                                    <span>Share:</span>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://zhsh9.info/post/PWK/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zhsh9.info/post/PWK/&sharesource=qzone&title=Pentest&pics=https://zhsh9.info/images/avatar.png?v=1711375148653&summary="><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://zhsh9.info/post/PWK/&sharesource=weibo&title=Pentest + " - " + &pic="https://zhsh9.info/images/avatar.png?v=1711375148653 "><i class="fa fa-weibo "></i></a>
+                                                        
+                                                                </span>
+                                                                <!--en-->
+                                                                <section class="post-tags en ">
+                                                                    <div>
+                                                                        <span>Tag(s):</span>
+                                                                        <span class="tag ">
+                        
+                        
+                        <a href="https://zhsh9.info/tag/0cvDgZszV/">#
+                                                PWK
+                                                    </a>
+                                                    
+                                                        
+                                                            </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <a href="javascript:window.history.back();">back</a>
+                                                                        <span>&dot;</span>
+                                                                        <a href="#">home</a>
+                                                                    </div>
+                                                                </section>
+                                                                
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://zhsh9.info/post/ifJ-yHR8x/">
+                                                                                            nmap cheat sheet
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://zhsh9.info/post/zuWZttsKt/">
+                                                                                                    Links
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                    
+                        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container" style="width: 100%;max-width: 780px;margin: auto;"></div>
+
+<script>
+    var gitalk = new Gitalk({
+        clientID: '11cf267617fbe2c71c94',
+        clientSecret: '3954c3a0371c9a9927394d5f3c259c3239ce6c69',
+        repo: 'zhsh9.github.io',
+        owner: 'zhsh9',
+        admin: ['zhsh9'],
+        id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+        distractionFreeMode: false // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+</script>
+                            
+                                        
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+                            
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        zhsh &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+                <script>
+                    
+                    
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1711375148653);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

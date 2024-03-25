@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    zhsh
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
+<meta name="author" content="zhsh">
+<meta name="description" content="move fast and break things">
+<meta name="keywords" content="zhsh,zhsh9,security">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://zhsh9.info/styles/main.css" />
+<link href="https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://fastly.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://zhsh9.info">
+                    zhsh
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        Home
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        Blog
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        Tag
+                    </a>
+                    
+                    <a class="menu-item" href="https://htbwp.readthedocs.io/en/latest/">
+                        HackTheBox
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        About
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1711375148653" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://zhsh9.info">
+                            zhsh
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1711375148653" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            Home
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            Blog
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            Tag
+                        </a>
+                        
+                        <a class="menu-item" href="https://htbwp.readthedocs.io/en/latest/">
+                            HackTheBox
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            About
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+    
+    <div id="tp-weather-widget"></div>
+    <script>
+      (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+      window.SeniverseWeatherWidget('show', {
+        flavor: "slim",
+        location: "WX4FBXXFKE4F",
+        geolocation: true,
+        language: "en",
+        unit: "c",
+        theme: "auto",
+        token: "a44a1d0f-abbb-4739-a53e-603c97094c4c",
+        hover: "disabled",
+        container: "tp-weather-widget"
+      });
+      var cnt = document.getElementsByClassName('sw-card-slim-container');
+      cnt.classList.add('ignore-css');
+    </script>
+
+
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                Introduction to Regular Expression
+                            </h1>
+                            
+                                <!--en-->
+                                <div class="post-meta en">
+                                    Author:
+                                    <a itemprop="author" rel="author" href="/">
+                                        zhsh
+                                    </a>
+                                    <span class="post-time">
+                                Date: <a href="#">2021-09-07</a>
+                            </span>
+                                    <span class="post-readtime">Reading Time:<a
+                                    href="#">2.3
+                                    mins</a></span>
+                                    <span class="post-words">words:<a href="#">639</a></span>
+                                    
+                                        <span class="post-category">
+                                Category:
+                                
+                                <a href="https://zhsh9.info/tag/_pEpOAFbf/">Regular Expression</a>
+                                
+                            </span>
+                                        
+                                </div>
+                                
+                        </header>
+                        
+                        <div class="post-content">
+                            <p>正则表达式是由普通字符（例如字符a 到z）以及特殊字符（称为&quot;元字符&quot;）组成的文字模式。模式描述在搜索文本时要匹配的一个或多个字符串。 正则表达式作为一个模板，将某个字符模式与所搜索的字符串进行匹配。</p>
+<!-- more -->
+<h1 id="基本元字符">基本元字符</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">元字符</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">.</td>
+<td style="text-align:center">匹配任意单个字符</td>
+</tr>
+<tr>
+<td style="text-align:center">|</td>
+<td style="text-align:center">逻辑或操作符</td>
+</tr>
+<tr>
+<td style="text-align:center">[]</td>
+<td style="text-align:center">匹配字符集合中的一个字符</td>
+</tr>
+<tr>
+<td style="text-align:center">[^]</td>
+<td style="text-align:center">对字符集求非</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:center">定义一个区间（e.g. [A-Z]）</td>
+</tr>
+<tr>
+<td style="text-align:center">|对下一个字符进行转义</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h1 id="数量元字符">数量元字符</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">元字符</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">*</td>
+<td style="text-align:center">匹配前一个字符（子表达式）的零次or多次</td>
+</tr>
+<tr>
+<td style="text-align:center">*?</td>
+<td style="text-align:center">*的懒惰版本</td>
+</tr>
+<tr>
+<td style="text-align:center">+</td>
+<td style="text-align:center">匹配前一个字符（子表达式）的一次or多次</td>
+</tr>
+<tr>
+<td style="text-align:center">+?</td>
+<td style="text-align:center">+的懒惰版本</td>
+</tr>
+<tr>
+<td style="text-align:center">?</td>
+<td style="text-align:center">匹配前一个字符（子表达式）的零次or一次</td>
+</tr>
+<tr>
+<td style="text-align:center">{n}</td>
+<td style="text-align:center">匹配前一个字符（子表达式）的n次</td>
+</tr>
+<tr>
+<td style="text-align:center">{m, n}</td>
+<td style="text-align:center">匹配前一个字符（子表达式）的m-n次</td>
+</tr>
+<tr>
+<td style="text-align:center">{n, }</td>
+<td style="text-align:center">匹配前一个字符（子表达式）至少n次</td>
+</tr>
+<tr>
+<td style="text-align:center">{n, }?</td>
+<td style="text-align:center">{n, }的懒惰版本</td>
+</tr>
+</tbody>
+</table>
+<h1 id="位置元字符">位置元字符</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">元字符</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">^</td>
+<td style="text-align:center">匹配字符串的开头</td>
+</tr>
+<tr>
+<td style="text-align:center">\A</td>
+<td style="text-align:center">匹配字符串的开头</td>
+</tr>
+<tr>
+<td style="text-align:center">$</td>
+<td style="text-align:center">匹配字符串的结束</td>
+</tr>
+<tr>
+<td style="text-align:center">\Z</td>
+<td style="text-align:center">匹配字符串的结束</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;</td>
+<td style="text-align:center">匹配单词的开头</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;</td>
+<td style="text-align:center">匹配单词的结束</td>
+</tr>
+<tr>
+<td style="text-align:center">\b</td>
+<td style="text-align:center">匹配单词的边界（开头and结束）</td>
+</tr>
+<tr>
+<td style="text-align:center">\B</td>
+<td style="text-align:center">\b的反义</td>
+</tr>
+</tbody>
+</table>
+<h1 id="特殊字符元字符">特殊字符元字符</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">元字符</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">[\b]</td>
+<td style="text-align:center">退格字符</td>
+</tr>
+<tr>
+<td style="text-align:center">\c</td>
+<td style="text-align:center">匹配一个控制字符</td>
+</tr>
+<tr>
+<td style="text-align:center">\d</td>
+<td style="text-align:center">匹配任意数字字符</td>
+</tr>
+<tr>
+<td style="text-align:center">\D</td>
+<td style="text-align:center">\d的反义</td>
+</tr>
+<tr>
+<td style="text-align:center">\f</td>
+<td style="text-align:center">换页符</td>
+</tr>
+<tr>
+<td style="text-align:center">\n</td>
+<td style="text-align:center">换行符</td>
+</tr>
+<tr>
+<td style="text-align:center">\r</td>
+<td style="text-align:center">回车符</td>
+</tr>
+<tr>
+<td style="text-align:center">\s</td>
+<td style="text-align:center">匹配一个空白字符</td>
+</tr>
+<tr>
+<td style="text-align:center">\S</td>
+<td style="text-align:center">\s的反义</td>
+</tr>
+<tr>
+<td style="text-align:center">\t</td>
+<td style="text-align:center">制表符</td>
+</tr>
+<tr>
+<td style="text-align:center">\v</td>
+<td style="text-align:center">垂直制表符</td>
+</tr>
+<tr>
+<td style="text-align:center">\w</td>
+<td style="text-align:center">匹配任意字母数字字符or下划线字符</td>
+</tr>
+<tr>
+<td style="text-align:center">\W</td>
+<td style="text-align:center">\w的反义</td>
+</tr>
+<tr>
+<td style="text-align:center">\x</td>
+<td style="text-align:center">匹配一个十六进制数字</td>
+</tr>
+<tr>
+<td style="text-align:center">\0</td>
+<td style="text-align:center">匹配一个八进制数字</td>
+</tr>
+</tbody>
+</table>
+<h1 id="回溯引用和前后查找">回溯引用和前后查找</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">元字符</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">()</td>
+<td style="text-align:center">定义一个子表达式</td>
+</tr>
+<tr>
+<td style="text-align:center">\1</td>
+<td style="text-align:center">匹配第1个子表达式；\n表示匹配第n个子表达式</td>
+</tr>
+<tr>
+<td style="text-align:center">?=</td>
+<td style="text-align:center">向前查找</td>
+</tr>
+<tr>
+<td style="text-align:center">?&lt;=</td>
+<td style="text-align:center">向后查找</td>
+</tr>
+<tr>
+<td style="text-align:center">?!</td>
+<td style="text-align:center">负向前查找</td>
+</tr>
+<tr>
+<td style="text-align:center">?&lt;!</td>
+<td style="text-align:center">负向后查找</td>
+</tr>
+<tr>
+<td style="text-align:center">?()</td>
+<td style="text-align:center">条件（if then）</td>
+</tr>
+<tr>
+<td style="text-align:center">?()|</td>
+<td style="text-align:center">条件（if then... else...）</td>
+</tr>
+</tbody>
+</table>
+<h1 id="大小写转换">大小写转换</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">元字符</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">\E</td>
+<td style="text-align:center">结束\L or \U转换</td>
+</tr>
+<tr>
+<td style="text-align:center">\l</td>
+<td style="text-align:center">把下一个字符转换为小写</td>
+</tr>
+<tr>
+<td style="text-align:center">\L</td>
+<td style="text-align:center">把后面的字符转换为小写，直到遇到\E</td>
+</tr>
+<tr>
+<td style="text-align:center">\u</td>
+<td style="text-align:center">把下一个字符转换为大写</td>
+</tr>
+<tr>
+<td style="text-align:center">\U</td>
+<td style="text-align:center">把后面的字符转换为大写，直到遇到\E</td>
+</tr>
+</tbody>
+</table>
+<h1 id="匹配模式">匹配模式</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">元字符</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">(?m)</td>
+<td style="text-align:center">分行匹配模式</td>
+</tr>
+</tbody>
+</table>
+
+                        </div>
+                        
+                            <div class="post-toc">
+                                <ul class="markdownIt-TOC">
+<li><a href="#%E5%9F%BA%E6%9C%AC%E5%85%83%E5%AD%97%E7%AC%A6">基本元字符</a></li>
+<li><a href="#%E6%95%B0%E9%87%8F%E5%85%83%E5%AD%97%E7%AC%A6">数量元字符</a></li>
+<li><a href="#%E4%BD%8D%E7%BD%AE%E5%85%83%E5%AD%97%E7%AC%A6">位置元字符</a></li>
+<li><a href="#%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E5%85%83%E5%AD%97%E7%AC%A6">特殊字符元字符</a></li>
+<li><a href="#%E5%9B%9E%E6%BA%AF%E5%BC%95%E7%94%A8%E5%92%8C%E5%89%8D%E5%90%8E%E6%9F%A5%E6%89%BE">回溯引用和前后查找</a></li>
+<li><a href="#%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2">大小写转换</a></li>
+<li><a href="#%E5%8C%B9%E9%85%8D%E6%A8%A1%E5%BC%8F">匹配模式</a></li>
+</ul>
+
+                            </div>
+                            
+                                
+                                    
+                                        <!--en-->
+                                        <section class="post-copyright en">
+                                            <p class="copyright-item">
+                                                <span>Author:</span>
+                                                <span>zhsh</span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>Permalink:</span>
+                                                <span><a href="https://zhsh9.info/post/6qQ0FB8Hw/">https://zhsh9.info/post/6qQ0FB8Hw/</a></span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>License:</span>
+                                                <span>MIT License</span>
+                                            </p>
+                                        </section>
+                                        
+                                                
+                                                    
+                                                        <!-- Share-->
+                                                        <span style="margin-right:15px">
+                                                    <i class="post-share"></i>
+                                                    <span>Share:</span>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://zhsh9.info/post/6qQ0FB8Hw/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zhsh9.info/post/6qQ0FB8Hw/&sharesource=qzone&title=Introduction to Regular Expression&pics=https://zhsh9.info/images/avatar.png?v=1711375148653&summary=&lt;p&gt;正则表达式是由普通字符（例如字符a 到z）以及特殊字符（称为&amp;quot;元字符&amp;quot;）组成的文字模式。模式描述在搜索文本时要匹配的一个或多个字符串。 正则表达式作为一个模板，将某个字符模式与所搜索的字符串进行匹配。&lt;/p&gt;
+"><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://zhsh9.info/post/6qQ0FB8Hw/&sharesource=weibo&title=Introduction to Regular Expression + " - " + &lt;p&gt;正则表达式是由普通字符（例如字符a 到z）以及特殊字符（称为&amp;quot;元字符&amp;quot;）组成的文字模式。模式描述在搜索文本时要匹配的一个或多个字符串。 正则表达式作为一个模板，将某个字符模式与所搜索的字符串进行匹配。&lt;/p&gt;
+&pic="https://zhsh9.info/images/avatar.png?v=1711375148653 "><i class="fa fa-weibo "></i></a>
+                                                        
+                                                                </span>
+                                                                <!--en-->
+                                                                <section class="post-tags en ">
+                                                                    <div>
+                                                                        <span>Tag(s):</span>
+                                                                        <span class="tag ">
+                        
+                        
+                        <a href="https://zhsh9.info/tag/_pEpOAFbf/">#
+                                                Regular Expression
+                                                    </a>
+                                                    
+                                                        
+                                                            </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <a href="javascript:window.history.back();">back</a>
+                                                                        <span>&dot;</span>
+                                                                        <a href="#">home</a>
+                                                                    </div>
+                                                                </section>
+                                                                
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://zhsh9.info/post/xJOKBvGro/">
+                                                                                            How to Permanently Revert to One-line Terminal in New Kali Linux 2021.02
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://zhsh9.info/post/xEKOnLjpQ/">
+                                                                                                    How to Deal with Large File in Python
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                    
+                        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container" style="width: 100%;max-width: 780px;margin: auto;"></div>
+
+<script>
+    var gitalk = new Gitalk({
+        clientID: '11cf267617fbe2c71c94',
+        clientSecret: '3954c3a0371c9a9927394d5f3c259c3239ce6c69',
+        repo: 'zhsh9.github.io',
+        owner: 'zhsh9',
+        admin: ['zhsh9'],
+        id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+        distractionFreeMode: false // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+</script>
+                            
+                                        
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+                            
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        zhsh &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+                <script>
+                    
+                    
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1711375148653);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

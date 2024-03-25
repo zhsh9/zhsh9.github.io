@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    zhsh
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
+<meta name="author" content="zhsh">
+<meta name="description" content="move fast and break things">
+<meta name="keywords" content="zhsh,zhsh9,security">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://zhsh9.info/styles/main.css" />
+<link href="https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://fastly.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://zhsh9.info">
+                    zhsh
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        Home
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        Blog
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        Tag
+                    </a>
+                    
+                    <a class="menu-item" href="https://htbwp.readthedocs.io/en/latest/">
+                        HackTheBox
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        About
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1711375148653" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://zhsh9.info">
+                            zhsh
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1711375148653" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            Home
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            Blog
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            Tag
+                        </a>
+                        
+                        <a class="menu-item" href="https://htbwp.readthedocs.io/en/latest/">
+                            HackTheBox
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            About
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+    
+    <div id="tp-weather-widget"></div>
+    <script>
+      (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+      window.SeniverseWeatherWidget('show', {
+        flavor: "slim",
+        location: "WX4FBXXFKE4F",
+        geolocation: true,
+        language: "en",
+        unit: "c",
+        theme: "auto",
+        token: "a44a1d0f-abbb-4739-a53e-603c97094c4c",
+        hover: "disabled",
+        container: "tp-weather-widget"
+      });
+      var cnt = document.getElementsByClassName('sw-card-slim-container');
+      cnt.classList.add('ignore-css');
+    </script>
+
+
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                Clustering in Machine Learning: k-means Algorithm
+                            </h1>
+                            
+                                <!--en-->
+                                <div class="post-meta en">
+                                    Author:
+                                    <a itemprop="author" rel="author" href="/">
+                                        zhsh
+                                    </a>
+                                    <span class="post-time">
+                                Date: <a href="#">2022-04-08</a>
+                            </span>
+                                    <span class="post-readtime">Reading Time:<a
+                                    href="#">4.4
+                                    mins</a></span>
+                                    <span class="post-words">words:<a href="#">706</a></span>
+                                    
+                                        <span class="post-category">
+                                Category:
+                                
+                                <a href="https://zhsh9.info/tag/iAzVv3u2q/">Machine Learning</a>
+                                
+                            </span>
+                                        
+                                </div>
+                                
+                        </header>
+                        
+                        <div class="post-content">
+                            <p>Prototyp-based clustering pretends various clusters could be discribed by a list of prototypes.</p>
+<p>Prototype is a data instance that is representative of all the data.</p>
+<p>This kind of algorithms usually initialize prototypes and update them iteratively. On account of not the same methods to present prototypes and ways to calculate expressions, there exists different algorithms, including k-means, Learning Vector Quantization, Mixture of  Gaussian.</p>
+<figure data-type="image" tabindex="1"><img src="https://zhsh9.info/post-images/1649409638500.png" alt="" loading="lazy"></figure>
+<p>The C++ implementation code is as following,</p>
+<pre><code class="language-c++">#include &lt;bits/stdc++.h&gt;
+
+using namespace std;
+
+#define MAX_OPERATION 10000
+
+// Author: eclipse
+
+class KMeans{
+private:
+    vector&lt;vector&lt;double&gt;&gt; data;   // Loaded data from text file.
+    vector&lt;vector&lt;int&gt;&gt; clusters;  // Vector stores each cluster which contains positions of each instance.
+    vector&lt;vector&lt;double&gt;&gt; means;  // Centroids variable stores mean var among each cluster.
+    vector&lt;int&gt; labels;            // Labels that contain the cluster number each instance belongs to.
+    
+private:
+    // Find the minimal distance between x and all centroids.
+    int findMinDistance(vector&lt;double&gt; &amp; x) {
+        vector&lt;double&gt; distances;
+        for (const auto &amp; mean : means)
+            distances.push_back(pow(abs(x[0] - mean[0]), (double )2) + pow(abs(x[1] - mean[1]), 2));
+        double minDis = distances[0];
+        int ret = 0;
+        for (int i = 0; i &lt; distances.size(); i++)
+            if (distances[i] &lt; minDis) { minDis = distances[i]; ret = i; }
+        return ret;
+    }
+
+    // Calculate new centroids.
+    vector&lt;double&gt; calcNewMean(int i) {
+        double sumX = 0, sumY = 0;
+        for (const auto &amp; instanceId : clusters[i]) {
+            sumX += data[instanceId][0];
+            sumY += data[instanceId][1];
+        }
+        return vector&lt;double&gt;({ sumX / (double )clusters[i].size(), sumY / (double )clusters[i].size() });
+    }
+
+    // Deepcopy clusters.
+    void deepcopy(vector&lt;vector&lt;int&gt;&gt; &amp; newClusters) {
+        for (const auto &amp; cluster : clusters) {
+            vector&lt;int&gt; tmp;
+            for (const auto &amp; j : cluster)
+                tmp.push_back(j);
+            newClusters.push_back(tmp);
+        }
+    }
+
+    // Compare clusters in this instance with newClusters.
+    // If they are the same, return true; otherwise, return false.
+    bool cmpCluster(vector&lt;vector&lt;int&gt;&gt; &amp; newClusters) {
+        for (int i = 0; i &lt; clusters.size(); i++) {
+            if (clusters[i].size() != newClusters[i].size()) return false;
+            for (int j = 0; j &lt; clusters[i].size(); j++)
+                if (clusters[i][j] != newClusters[i][j]) return false;
+        }
+        return true;
+    }
+
+public:
+    // Load data from input.txt into vector.
+    void Load(const string &amp; fileName) {
+        ifstream ifs(fileName);
+        string buf;
+        while (getline(ifs, buf)) {
+            stringstream ss(buf);
+            string subStr;
+            vector&lt;double&gt; instance;
+            while (getline(ss, subStr, '\t'))
+                if (!subStr.empty()) instance.push_back(stof(subStr));
+            data.push_back(instance);
+        }
+        ifs.close();
+    }
+
+    // Parameter k means the number of clusters intended to get.
+    // Run k-means algorithm to get the labels vector stored in instance of this class.
+    void Fit(int k) {
+        if (data.empty()) {
+            cout &lt;&lt; &quot;Properly load data first!!!&quot; &lt;&lt; endl;
+            return;
+        }
+        for (int i = 0; i &lt; k; i++) {
+            clusters.emplace_back();  // Initialize clusters.
+            means.push_back(data[(i)]); // Initialize means.
+        }
+        labels = vector&lt;int&gt;(data.size());  // Initialize labels.
+
+        for (int ii = 0; ii &lt; MAX_OPERATION; ii++) {
+            vector&lt;vector&lt;int&gt;&gt; newClusters;
+            deepcopy(newClusters);
+            for (auto &amp;cluster: clusters)  // Clear clusters.
+                cluster.clear();
+            for (int i = 0; i &lt; data.size(); i++) {
+                int label = findMinDistance(data[i]);
+                clusters[label].push_back(i);
+                labels[i] = label;
+            }
+            for (int i = 0; i &lt; k; i++) {
+                vector&lt;double&gt; newMean = calcNewMean(i);
+                if (newMean[0] != means[i][0] || newMean[1] != means[i][1]) means[i] = newMean;
+            }
+            if (cmpCluster(newClusters)) break;
+        }
+    }
+
+    void PrintLabels() {
+        cout &lt;&lt; &quot;Labels:&quot; &lt;&lt; endl &lt;&lt;  &quot;[&quot;;
+        for (const auto &amp; label : labels)
+            cout &lt;&lt; label &lt;&lt; &quot;,&quot;;
+        cout &lt;&lt; &quot;]&quot; &lt;&lt; endl;
+    }
+
+    void PrintCentroids() {
+        cout &lt;&lt; &quot;Centroids:&quot; &lt;&lt; endl &lt;&lt; &quot;[&quot; &lt;&lt; endl;
+        for (const auto &amp; mean : means)
+            cout &lt;&lt; &quot;[&quot; &lt;&lt; mean[0] &lt;&lt; &quot;, &quot; &lt;&lt; mean[1] &lt;&lt; &quot;],&quot;&lt;&lt; endl;
+        cout &lt;&lt; &quot;]&quot; &lt;&lt; endl;
+    }
+};
+
+int main() {
+    KMeans kMeans = KMeans();
+    kMeans.Load(&quot;../Clustering/k-means/input2.txt&quot;);
+    kMeans.Fit(4);
+    kMeans.PrintLabels();
+    kMeans.PrintCentroids();
+    return 0;
+}
+</code></pre>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/2.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/">Creative Commons Attribution-ShareAlike 2.0 Generic License</a>.</p>
+
+                        </div>
+                        
+                            <div class="post-toc">
+                                
+                            </div>
+                            
+                                
+                                    
+                                        <!--en-->
+                                        <section class="post-copyright en">
+                                            <p class="copyright-item">
+                                                <span>Author:</span>
+                                                <span>zhsh</span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>Permalink:</span>
+                                                <span><a href="https://zhsh9.info/post/SSxx8JVxj/">https://zhsh9.info/post/SSxx8JVxj/</a></span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>License:</span>
+                                                <span>MIT License</span>
+                                            </p>
+                                        </section>
+                                        
+                                                
+                                                    
+                                                        <!-- Share-->
+                                                        <span style="margin-right:15px">
+                                                    <i class="post-share"></i>
+                                                    <span>Share:</span>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://zhsh9.info/post/SSxx8JVxj/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zhsh9.info/post/SSxx8JVxj/&sharesource=qzone&title=Clustering in Machine Learning: k-means Algorithm&pics=https://zhsh9.info/images/avatar.png?v=1711375148653&summary="><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://zhsh9.info/post/SSxx8JVxj/&sharesource=weibo&title=Clustering in Machine Learning: k-means Algorithm + " - " + &pic="https://zhsh9.info/images/avatar.png?v=1711375148653 "><i class="fa fa-weibo "></i></a>
+                                                        
+                                                                </span>
+                                                                <!--en-->
+                                                                <section class="post-tags en ">
+                                                                    <div>
+                                                                        <span>Tag(s):</span>
+                                                                        <span class="tag ">
+                        
+                        
+                        <a href="https://zhsh9.info/tag/iAzVv3u2q/">#
+                                                Machine Learning
+                                                    </a>
+                                                    
+                                                        
+                                                            </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <a href="javascript:window.history.back();">back</a>
+                                                                        <span>&dot;</span>
+                                                                        <a href="#">home</a>
+                                                                    </div>
+                                                                </section>
+                                                                
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://zhsh9.info/post/YCimSbE1r/">
+                                                                                            Challenge 4. calc (pwntable.tw)
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://zhsh9.info/post/SIPZQTxzc/">
+                                                                                                    NKUCS OJ Problems: 	Advanced Language Programming
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                    
+                        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container" style="width: 100%;max-width: 780px;margin: auto;"></div>
+
+<script>
+    var gitalk = new Gitalk({
+        clientID: '11cf267617fbe2c71c94',
+        clientSecret: '3954c3a0371c9a9927394d5f3c259c3239ce6c69',
+        repo: 'zhsh9.github.io',
+        owner: 'zhsh9',
+        admin: ['zhsh9'],
+        id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+        distractionFreeMode: false // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+</script>
+                            
+                                        
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+                            
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        zhsh &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+                <script>
+                    
+                    
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1711375148653);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

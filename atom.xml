@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://zhsh.info</id>
+    <title>zhsh&apos;s blog</title>
+    <updated>2024-08-04T11:23:30.822Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://zhsh.info"/>
+    <link rel="self" href="https://zhsh.info/atom.xml"/>
+    <subtitle>move fast and break things</subtitle>
+    <logo>https://zhsh.info/images/avatar.png</logo>
+    <icon>https://zhsh.info/favicon.ico</icon>
+    <rights>All rights reserved 2024, zhsh&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[macOS Install Spark & PySpark]]></title>
+        <id>https://zhsh.info/macos-install-spark-and-pyspark/</id>
+        <link href="https://zhsh.info/macos-install-spark-and-pyspark/">
+        </link>
+        <updated>2024-08-03T20:05:56.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Windows Prettier CRLF/LF Error Fixing]]></title>
+        <id>https://zhsh.info/windows-prettier-crlflf-error-fixing/</id>
+        <link href="https://zhsh.info/windows-prettier-crlflf-error-fixing/">
+        </link>
+        <updated>2024-07-27T09:47:15.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Integrated HTTP IDS Design: Whitelist]]></title>
+        <id>https://zhsh.info/i_http_ids-whitelist-design/</id>
+        <link href="https://zhsh.info/i_http_ids-whitelist-design/">
+        </link>
+        <updated>2024-07-21T18:10:05.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Integrated HTTP IDS Design: Data Flow]]></title>
+        <id>https://zhsh.info/integrated-http-ids-design-data-flow/</id>
+        <link href="https://zhsh.info/integrated-http-ids-design-data-flow/">
+        </link>
+        <updated>2024-07-21T17:43:13.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Configure jupyter-lab environment under Windows]]></title>
+        <id>https://zhsh.info/configure-jupyter-lab-environment-under-windows/</id>
+        <link href="https://zhsh.info/configure-jupyter-lab-environment-under-windows/">
+        </link>
+        <updated>2024-07-21T17:40:27.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CSS Transition & Transform & Animation]]></title>
+        <id>https://zhsh.info/css-transition/</id>
+        <link href="https://zhsh.info/css-transition/">
+        </link>
+        <updated>2024-06-30T15:36:01.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CSS Flex & Grid]]></title>
+        <id>https://zhsh.info/css-flex-and-grid/</id>
+        <link href="https://zhsh.info/css-flex-and-grid/">
+        </link>
+        <updated>2024-06-30T15:35:38.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CSS Crash Course]]></title>
+        <id>https://zhsh.info/css-crash-course/</id>
+        <link href="https://zhsh.info/css-crash-course/">
+        </link>
+        <updated>2024-06-30T07:55:40.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Cross Entropy in Classification]]></title>
+        <id>https://zhsh.info/cross-entropy-in-classification/</id>
+        <link href="https://zhsh.info/cross-entropy-in-classification/">
+        </link>
+        <updated>2024-06-30T05:49:52.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HTTP Feature Engineering]]></title>
+        <id>https://zhsh.info/http-feature-engineering/</id>
+        <link href="https://zhsh.info/http-feature-engineering/">
+        </link>
+        <updated>2024-06-27T01:39:16.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Extract Timestamp of HTTP Traffic]]></title>
+        <id>https://zhsh.info/extract-timestamp-of-http-traffic/</id>
+        <link href="https://zhsh.info/extract-timestamp-of-http-traffic/">
+        </link>
+        <updated>2024-06-25T18:30:29.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Principle to Write Great Prompt: CO-STAR]]></title>
+        <id>https://zhsh.info/principle-to-write-great-prompt-co-star/</id>
+        <link href="https://zhsh.info/principle-to-write-great-prompt-co-star/">
+        </link>
+        <updated>2024-06-16T20:12:03.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CSS Attribute: display]]></title>
+        <id>https://zhsh.info/css-attribute-display/</id>
+        <link href="https://zhsh.info/css-attribute-display/">
+        </link>
+        <updated>2024-06-16T20:07:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CSS Selector Crash Course]]></title>
+        <id>https://zhsh.info/css-selector/</id>
+        <link href="https://zhsh.info/css-selector/">
+        </link>
+        <updated>2024-06-16T20:02:57.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HTTP Intrusion Detection: Simulation System Design]]></title>
+        <id>https://zhsh.info/http-intrusion-detection-simulation-system-design/</id>
+        <link href="https://zhsh.info/http-intrusion-detection-simulation-system-design/">
+        </link>
+        <updated>2024-06-15T17:29:55.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python Module & Third-Party Library]]></title>
+        <id>https://zhsh.info/python-module-and-third-party-library/</id>
+        <link href="https://zhsh.info/python-module-and-third-party-library/">
+        </link>
+        <updated>2024-06-15T09:29:17.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Tcpdump + Scapy: Capture & Filter Linux Network Traffic]]></title>
+        <id>https://zhsh.info/tcpdump-scapy-capture-and-filter-linux-network-traffic/</id>
+        <link href="https://zhsh.info/tcpdump-scapy-capture-and-filter-linux-network-traffic/">
+        </link>
+        <updated>2024-06-12T22:21:51.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Integrated Real-time HTTP Intrusion Detection System Design]]></title>
+        <id>https://zhsh.info/integrated-real-time-http-intrusion-detection-system-design/</id>
+        <link href="https://zhsh.info/integrated-real-time-http-intrusion-detection-system-design/">
+        </link>
+        <updated>2024-06-12T21:23:33.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Interacting With The Operating System Using Python]]></title>
+        <id>https://zhsh.info/interacting-with-the-operating-system-using-python/</id>
+        <link href="https://zhsh.info/interacting-with-the-operating-system-using-python/">
+        </link>
+        <updated>2024-06-12T19:13:16.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Triplet Loss]]></title>
+        <id>https://zhsh.info/triplet-loss/</id>
+        <link href="https://zhsh.info/triplet-loss/">
+        </link>
+        <updated>2024-06-11T18:56:42.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ID Detection System Design]]></title>
+        <id>https://zhsh.info/id-detection-system-design/</id>
+        <link href="https://zhsh.info/id-detection-system-design/">
+        </link>
+        <updated>2024-06-11T17:03:14.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PySpark Crash Course]]></title>
+        <id>https://zhsh.info/pyspark-crash-course/</id>
+        <link href="https://zhsh.info/pyspark-crash-course/">
+        </link>
+        <updated>2024-06-10T16:43:46.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hive Crash Course]]></title>
+        <id>https://zhsh.info/hive-crash-course/</id>
+        <link href="https://zhsh.info/hive-crash-course/">
+        </link>
+        <updated>2024-06-10T16:42:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security Technology Practice Platforms]]></title>
+        <id>https://zhsh.info/security-technology-practice-platforms/</id>
+        <link href="https://zhsh.info/security-technology-practice-platforms/">
+        </link>
+        <updated>2024-05-23T00:12:48.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Web Shell 101]]></title>
+        <id>https://zhsh.info/web-shell-101/</id>
+        <link href="https://zhsh.info/web-shell-101/">
+        </link>
+        <updated>2024-05-22T19:45:02.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[WordPress Admin GetShell]]></title>
+        <id>https://zhsh.info/wordpress-admin-getshell/</id>
+        <link href="https://zhsh.info/wordpress-admin-getshell/">
+        </link>
+        <updated>2024-05-21T10:58:47.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[COMP7904 Final Exam Machine]]></title>
+        <id>https://zhsh.info/comp7904-final-exam-easy-machine/</id>
+        <link href="https://zhsh.info/comp7904-final-exam-easy-machine/">
+        </link>
+        <updated>2024-05-20T10:05:18.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[NLP: Word Embedding]]></title>
+        <id>https://zhsh.info/nlp-word-embedding/</id>
+        <link href="https://zhsh.info/nlp-word-embedding/">
+        </link>
+        <updated>2024-05-10T14:03:29.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HKU DASC7606 Review]]></title>
+        <id>https://zhsh.info/hku-dasc7606/</id>
+        <link href="https://zhsh.info/hku-dasc7606/">
+        </link>
+        <updated>2024-05-10T12:33:42.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[COMP7904 Assignment2 Write-up]]></title>
+        <id>https://zhsh.info/nSIJm9D2q/</id>
+        <link href="https://zhsh.info/nSIJm9D2q/">
+        </link>
+        <updated>2024-05-05T06:29:23.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[TF-IDF & Cosine Similarity]]></title>
+        <id>https://zhsh.info/tvBZTc0Rd/</id>
+        <link href="https://zhsh.info/tvBZTc0Rd/">
+        </link>
+        <updated>2024-04-28T10:49:04.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Linux Reverse Shell]]></title>
+        <id>https://zhsh.info/46VOHTEhP/</id>
+        <link href="https://zhsh.info/46VOHTEhP/">
+        </link>
+        <updated>2024-04-22T18:41:23.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Performance Monitoring Commands on Linux]]></title>
+        <id>https://zhsh.info/kdvyQ2hye/</id>
+        <link href="https://zhsh.info/kdvyQ2hye/">
+        </link>
+        <updated>2024-04-22T03:24:19.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Bypass sudo password on Kali/ParrotOS]]></title>
+        <id>https://zhsh.info/2vYAQe8SF/</id>
+        <link href="https://zhsh.info/2vYAQe8SF/">
+        </link>
+        <updated>2024-04-14T07:28:37.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HKU Forensics CTF Write-up]]></title>
+        <id>https://zhsh.info/oAG1vuABW/</id>
+        <link href="https://zhsh.info/oAG1vuABW/">
+        </link>
+        <updated>2024-04-13T17:39:16.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Powershell History Checking]]></title>
+        <id>https://zhsh.info/hfI7NhvLZ/</id>
+        <link href="https://zhsh.info/hfI7NhvLZ/">
+        </link>
+        <updated>2024-04-08T07:43:41.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[SNMP Enumeration]]></title>
+        <id>https://zhsh.info/ZAcLBmjyB/</id>
+        <link href="https://zhsh.info/ZAcLBmjyB/">
+        </link>
+        <updated>2024-03-26T10:57:36.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Rust 101]]></title>
+        <id>https://zhsh.info/JnxcrDKh6/</id>
+        <link href="https://zhsh.info/JnxcrDKh6/">
+        </link>
+        <updated>2024-03-26T03:04:05.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Install Fonts on Ubuntu]]></title>
+        <id>https://zhsh.info/MhpwV_tX2/</id>
+        <link href="https://zhsh.info/MhpwV_tX2/">
+        </link>
+        <updated>2024-03-24T12:57:35.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Process of Connecting a Network]]></title>
+        <id>https://zhsh.info/SuPFWt4Aw/</id>
+        <link href="https://zhsh.info/SuPFWt4Aw/">
+        </link>
+        <updated>2024-03-18T03:33:41.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Shared Folder Configuration on VMware Fusion, Linux]]></title>
+        <id>https://zhsh.info/XoX_BcekJ/</id>
+        <link href="https://zhsh.info/XoX_BcekJ/">
+        </link>
+        <updated>2024-03-09T12:53:37.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Git Repo Delete Particular Commits]]></title>
+        <id>https://zhsh.info/P8Z0jOvxP/</id>
+        <link href="https://zhsh.info/P8Z0jOvxP/">
+        </link>
+        <updated>2024-03-08T07:16:25.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Summer Internship 101]]></title>
+        <id>https://zhsh.info/zZiB3DTDw/</id>
+        <link href="https://zhsh.info/zZiB3DTDw/">
+        </link>
+        <updated>2024-03-07T13:43:08.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kitty Thiner JetBrainsMono Font Configuration]]></title>
+        <id>https://zhsh.info/1q3_83PpD/</id>
+        <link href="https://zhsh.info/1q3_83PpD/">
+        </link>
+        <updated>2024-03-07T01:00:36.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Information Security Course - Assignment1]]></title>
+        <id>https://zhsh.info/OXc5_a4YV/</id>
+        <link href="https://zhsh.info/OXc5_a4YV/">
+        </link>
+        <updated>2024-03-06T23:49:25.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Private Npm Registry & Publish Malicious Package]]></title>
+        <id>https://zhsh.info/-hnu80rMR/</id>
+        <link href="https://zhsh.info/-hnu80rMR/">
+        </link>
+        <updated>2024-03-04T20:21:21.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CVE Search Engine & Malware Detect Platform]]></title>
+        <id>https://zhsh.info/fZROwrRbZ/</id>
+        <link href="https://zhsh.info/fZROwrRbZ/">
+        </link>
+        <updated>2024-03-04T13:41:25.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Linux Shell Upgrade]]></title>
+        <id>https://zhsh.info/iwxWInhNo/</id>
+        <link href="https://zhsh.info/iwxWInhNo/">
+        </link>
+        <updated>2024-03-04T12:20:19.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Install BloodHound on Windows]]></title>
+        <id>https://zhsh.info/slbGobOio/</id>
+        <link href="https://zhsh.info/slbGobOio/">
+        </link>
+        <updated>2024-02-27T10:26:21.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Port Forwarding: ssh & chisel & meterpreter]]></title>
+        <id>https://zhsh.info/BhKW5VPLb/</id>
+        <link href="https://zhsh.info/BhKW5VPLb/">
+        </link>
+        <updated>2024-02-11T03:53:27.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Linux PAM 1.1.0 - MOTD File Tampering Privilege Escalation]]></title>
+        <id>https://zhsh.info/ti322t9qo/</id>
+        <link href="https://zhsh.info/ti322t9qo/">
+        </link>
+        <updated>2023-12-29T13:08:38.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[File Upload Configuragtion in PHP]]></title>
+        <id>https://zhsh.info/9oDsfGZqk/</id>
+        <link href="https://zhsh.info/9oDsfGZqk/">
+        </link>
+        <updated>2023-12-29T11:28:21.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Block Device in Linux]]></title>
+        <id>https://zhsh.info/6L9TfjXgR/</id>
+        <link href="https://zhsh.info/6L9TfjXgR/">
+        </link>
+        <updated>2023-12-29T09:02:29.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Restriced Shell Escape]]></title>
+        <id>https://zhsh.info/SWdyotqkH/</id>
+        <link href="https://zhsh.info/SWdyotqkH/">
+        </link>
+        <updated>2023-12-19T18:08:03.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Interact with POP3 Server]]></title>
+        <id>https://zhsh.info/IYapEQn3A/</id>
+        <link href="https://zhsh.info/IYapEQn3A/">
+        </link>
+        <updated>2023-12-15T15:41:38.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Clean Macbook Pro 2019 16inch]]></title>
+        <id>https://zhsh.info/jauX8izCD/</id>
+        <link href="https://zhsh.info/jauX8izCD/">
+        </link>
+        <updated>2023-07-08T16:06:28.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Reverse Shell Cheat Sheet]]></title>
+        <id>https://zhsh.info/RXOBNgNUj/</id>
+        <link href="https://zhsh.info/RXOBNgNUj/">
+        </link>
+        <updated>2023-05-23T22:01:09.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The Missing Semester of Your CS Education, v2020]]></title>
+        <id>https://zhsh.info/4Cx1M79dd/</id>
+        <link href="https://zhsh.info/4Cx1M79dd/">
+        </link>
+        <updated>2023-05-23T14:31:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ranger usage]]></title>
+        <id>https://zhsh.info/9DbiMwM_3/</id>
+        <link href="https://zhsh.info/9DbiMwM_3/">
+        </link>
+        <updated>2023-05-23T12:32:51.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[nmap cheat sheet]]></title>
+        <id>https://zhsh.info/ifJ-yHR8x/</id>
+        <link href="https://zhsh.info/ifJ-yHR8x/">
+        </link>
+        <updated>2023-05-19T04:36:33.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pentest]]></title>
+        <id>https://zhsh.info/PWK/</id>
+        <link href="https://zhsh.info/PWK/">
+        </link>
+        <updated>2023-05-19T03:29:51.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Links]]></title>
+        <id>https://zhsh.info/zuWZttsKt/</id>
+        <link href="https://zhsh.info/zuWZttsKt/">
+        </link>
+        <updated>2023-05-17T08:52:04.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Manual: pwntools]]></title>
+        <id>https://zhsh.info/t9bZhsquv/</id>
+        <link href="https://zhsh.info/t9bZhsquv/">
+        </link>
+        <updated>2023-05-17T08:45:55.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Modern Cryptography Notes]]></title>
+        <id>https://zhsh.info/F8hcTnUyM/</id>
+        <link href="https://zhsh.info/F8hcTnUyM/">
+        </link>
+        <updated>2022-09-16T14:19:35.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Challenge 5. 3x17 (pwnable.tw)]]></title>
+        <id>https://zhsh.info/2JAgwV_kT/</id>
+        <link href="https://zhsh.info/2JAgwV_kT/">
+        </link>
+        <updated>2022-04-16T12:22:37.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Challenge 4. calc (pwntable.tw)]]></title>
+        <id>https://zhsh.info/YCimSbE1r/</id>
+        <link href="https://zhsh.info/YCimSbE1r/">
+        </link>
+        <updated>2022-04-16T12:11:07.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Clustering in Machine Learning: k-means Algorithm]]></title>
+        <id>https://zhsh.info/SSxx8JVxj/</id>
+        <link href="https://zhsh.info/SSxx8JVxj/">
+        </link>
+        <updated>2022-04-08T09:16:53.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[NKUCS OJ Problems: 	Advanced Language Programming]]></title>
+        <id>https://zhsh.info/SIPZQTxzc/</id>
+        <link href="https://zhsh.info/SIPZQTxzc/">
+        </link>
+        <updated>2022-03-22T06:05:54.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Data Structure in C]]></title>
+        <id>https://zhsh.info/I404HkphT/</id>
+        <link href="https://zhsh.info/I404HkphT/">
+        </link>
+        <updated>2022-03-16T13:59:17.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Challenge 2. orw (pwnable.tw)]]></title>
+        <id>https://zhsh.info/JEOBoEHyt/</id>
+        <link href="https://zhsh.info/JEOBoEHyt/">
+        </link>
+        <updated>2022-03-16T06:02:29.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Challenge 1. start (pwnable.tw)]]></title>
+        <id>https://zhsh.info/lHAnG6xjF/</id>
+        <link href="https://zhsh.info/lHAnG6xjF/">
+        </link>
+        <updated>2022-03-16T04:14:26.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Data Stucture Report: Calculating Expression]]></title>
+        <id>https://zhsh.info/hsq3C-u7T/</id>
+        <link href="https://zhsh.info/hsq3C-u7T/">
+        </link>
+        <updated>2022-03-15T04:27:06.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[NKUCS OJ Problems: Data Structure]]></title>
+        <id>https://zhsh.info/asqm5mIBn/</id>
+        <link href="https://zhsh.info/asqm5mIBn/">
+        </link>
+        <updated>2022-03-13T06:56:24.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Fix "UnicodeEncodeError" When Running gef on Ubuntu20.04]]></title>
+        <id>https://zhsh.info/a0NaW1Q9e/</id>
+        <link href="https://zhsh.info/a0NaW1Q9e/">
+        </link>
+        <updated>2021-12-14T07:22:07.000Z</updated>
+        <summary type="html"><![CDATA[<p>Fixing the encoding problem using gef plugin for gdb on Ubuntu 20.04 Docker container.</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Fixing the encoding problem using gef plugin for gdb on Ubuntu 20.04 Docker container.</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LeetCode Practice: Greedy]]></title>
+        <id>https://zhsh.info/9Vbd6hvyw/</id>
+        <link href="https://zhsh.info/9Vbd6hvyw/">
+        </link>
+        <updated>2021-11-03T03:18:18.000Z</updated>
+        <summary type="html"><![CDATA[<p align='center'>Intentional practice is the key to success.</p>]]></summary>
+        <content type="html"><![CDATA[<p align='center'>Intentional practice is the key to success.</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Qt Environment on macOS]]></title>
+        <id>https://zhsh.info/xdySGFEUX/</id>
+        <link href="https://zhsh.info/xdySGFEUX/">
+        </link>
+        <updated>2021-10-07T11:40:09.000Z</updated>
+        <summary type="html"><![CDATA[<p><strong>Qt</strong> is a widget toolkit for creating graphical user interfaces as well as cross-platform applications that run on various software and hardware platforms such as Linux, Windows, macOS, Android or embedded systems with little or no change in the underlying codebase while still being a native application with native capabilities and speed. (Wikipedia)</p>
+]]></summary>
+        <content type="html"><![CDATA[<p><strong>Qt</strong> is a widget toolkit for creating graphical user interfaces as well as cross-platform applications that run on various software and hardware platforms such as Linux, Windows, macOS, Android or embedded systems with little or no change in the underlying codebase while still being a native application with native capabilities and speed. (Wikipedia)</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LeetCode Practice: Tree (Part 2)]]></title>
+        <id>https://zhsh.info/2p65IgOA_/</id>
+        <link href="https://zhsh.info/2p65IgOA_/">
+        </link>
+        <updated>2021-10-06T09:50:56.000Z</updated>
+        <summary type="html"><![CDATA[<p align='center'>Intentional practicing is of great importance.</p>]]></summary>
+        <content type="html"><![CDATA[<p align='center'>Intentional practicing is of great importance.</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to Perfectly Install Windows11 on Parallels Desktop17]]></title>
+        <id>https://zhsh.info/OUdB8LJtE/</id>
+        <link href="https://zhsh.info/OUdB8LJtE/">
+        </link>
+        <updated>2021-10-05T13:10:26.000Z</updated>
+        <summary type="html"><![CDATA[<p>Today, Tue 5 Oct 2021 is the release time for Windows11. Since I do not have a spare machine, a virtual machine on Parallels Desktop is the best choice. The blog will walk through whole steps you need to take for installing the lovely Windows11 on your own PD.</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Today, Tue 5 Oct 2021 is the release time for Windows11. Since I do not have a spare machine, a virtual machine on Parallels Desktop is the best choice. The blog will walk through whole steps you need to take for installing the lovely Windows11 on your own PD.</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Java Style Guide]]></title>
+        <id>https://zhsh.info/7nC6AYAsx/</id>
+        <link href="https://zhsh.info/7nC6AYAsx/">
+        </link>
+        <updated>2021-10-04T10:53:16.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Lecture Notes: Digital Logic]]></title>
+        <id>https://zhsh.info/OzQnaeZ3s/</id>
+        <link href="https://zhsh.info/OzQnaeZ3s/">
+        </link>
+        <updated>2021-10-04T02:04:22.000Z</updated>
+        <summary type="html"><![CDATA[<p align='center'>大学课程：数字逻辑；笔记+课堂总结+题目总结。</p>]]></summary>
+        <content type="html"><![CDATA[<p align='center'>大学课程：数字逻辑；笔记+课堂总结+题目总结。</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Manage Python Virtual Environment]]></title>
+        <id>https://zhsh.info/NquhcdoLu/</id>
+        <link href="https://zhsh.info/NquhcdoLu/">
+        </link>
+        <updated>2021-09-26T11:59:47.000Z</updated>
+        <summary type="html"><![CDATA[<p>Sometimes, you might accidentally install many versions of Python and get confused about which one to use or which one is being used in your computer's environment. In this aritcle, several solutions to deal with virtual environment will be covered.</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Sometimes, you might accidentally install many versions of Python and get confused about which one to use or which one is being used in your computer's environment. In this aritcle, several solutions to deal with virtual environment will be covered.</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LeetCode Practice: Tree (Part 1)]]></title>
+        <id>https://zhsh.info/C-GHU6DNM/</id>
+        <link href="https://zhsh.info/C-GHU6DNM/">
+        </link>
+        <updated>2021-09-24T14:50:20.000Z</updated>
+        <summary type="html"><![CDATA[<p align='center'>Intentional practicing is of great importance.</p>]]></summary>
+        <content type="html"><![CDATA[<p align='center'>Intentional practicing is of great importance.</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Lecture Notes: Linear Algebra]]></title>
+        <id>https://zhsh.info/1Fyux24SY/</id>
+        <link href="https://zhsh.info/1Fyux24SY/">
+        </link>
+        <updated>2021-09-23T05:38:54.000Z</updated>
+        <summary type="html"><![CDATA[<p align='center'>大学课程：线性代数；笔记+课堂总结+题目总结。</p>]]></summary>
+        <content type="html"><![CDATA[<p align='center'>大学课程：线性代数；笔记+课堂总结+题目总结。</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Now, Parallels Tools can be Smoothly Installed on Kali 2021.02]]></title>
+        <id>https://zhsh.info/2tUZw0V4U/</id>
+        <link href="https://zhsh.info/2tUZw0V4U/">
+        </link>
+        <updated>2021-09-17T02:25:17.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ubuntu-Based Environment for PWN]]></title>
+        <id>https://zhsh.info/SzH2SEYJz/</id>
+        <link href="https://zhsh.info/SzH2SEYJz/">
+        </link>
+        <updated>2021-09-15T01:07:09.000Z</updated>
+        <summary type="html"><![CDATA[<p>There are several choices for implementing ctf environment for PWN. For example, docker containers or virtual machines including Ubuntu 16 18 20, Kali Linux and so on.</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>There are several choices for implementing ctf environment for PWN. For example, docker containers or virtual machines including Ubuntu 16 18 20, Kali Linux and so on.</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Using Pop Shell on Kali Linux]]></title>
+        <id>https://zhsh.info/x8OgZ9olC/</id>
+        <link href="https://zhsh.info/x8OgZ9olC/">
+        </link>
+        <updated>2021-09-14T04:25:37.000Z</updated>
+        <summary type="html"><![CDATA[<p>From my perspective, the most impressive tool on Pop!_OS is the POP SHELL. It provides functions like window management and application launcher which are convenient for Linux GUI users. So why not using it on Kali?</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>From my perspective, the most impressive tool on Pop!_OS is the POP SHELL. It provides functions like window management and application launcher which are convenient for Linux GUI users. So why not using it on Kali?</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Writing Styles: the Title of English Articles]]></title>
+        <id>https://zhsh.info/z8nT6kBDu/</id>
+        <link href="https://zhsh.info/z8nT6kBDu/">
+        </link>
+        <updated>2021-09-12T13:54:21.000Z</updated>
+        <summary type="html"><![CDATA[<p>For novice writers, sometimes it is hard to be clear how to manage titles. Especially what letter need be capitalised and what letter do not. After reading this blog, I wish you learned more prevalent rules.</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>For novice writers, sometimes it is hard to be clear how to manage titles. Especially what letter need be capitalised and what letter do not. After reading this blog, I wish you learned more prevalent rules.</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to Permanently Revert to One-line Terminal in New Kali Linux 2021.02]]></title>
+        <id>https://zhsh.info/xJOKBvGro/</id>
+        <link href="https://zhsh.info/xJOKBvGro/">
+        </link>
+        <updated>2021-09-12T13:39:04.000Z</updated>
+        <summary type="html"><![CDATA[<p>After the release of Kali Linux 2021.02 version, I can not help to install it in Parallels Desktop. Nevertheless, the Parallels Tools still cannot be correctly installed in PD 16 on macOS 11.5. Except for some novel features and enhancements, there are some stuff that I am a little confused about -- the Command Line.</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>After the release of Kali Linux 2021.02 version, I can not help to install it in Parallels Desktop. Nevertheless, the Parallels Tools still cannot be correctly installed in PD 16 on macOS 11.5. Except for some novel features and enhancements, there are some stuff that I am a little confused about -- the Command Line.</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introduction to Regular Expression]]></title>
+        <id>https://zhsh.info/6qQ0FB8Hw/</id>
+        <link href="https://zhsh.info/6qQ0FB8Hw/">
+        </link>
+        <updated>2021-09-07T04:53:06.000Z</updated>
+        <summary type="html"><![CDATA[<p>正则表达式是由普通字符（例如字符a 到z）以及特殊字符（称为&quot;元字符&quot;）组成的文字模式。模式描述在搜索文本时要匹配的一个或多个字符串。 正则表达式作为一个模板，将某个字符模式与所搜索的字符串进行匹配。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>正则表达式是由普通字符（例如字符a 到z）以及特殊字符（称为&quot;元字符&quot;）组成的文字模式。模式描述在搜索文本时要匹配的一个或多个字符串。 正则表达式作为一个模板，将某个字符模式与所搜索的字符串进行匹配。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to Deal with Large File in Python]]></title>
+        <id>https://zhsh.info/xEKOnLjpQ/</id>
+        <link href="https://zhsh.info/xEKOnLjpQ/">
+        </link>
+        <updated>2021-09-05T08:04:37.000Z</updated>
+        <summary type="html"><![CDATA[<p>When we use <code>f.readlines()</code> or <code>f.readline()</code> to get file data, there might happen a problem. For example, the file is so large that our computer memory is not big enough to afford.</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>When we use <code>f.readlines()</code> or <code>f.readline()</code> to get file data, there might happen a problem. For example, the file is so large that our computer memory is not big enough to afford.</p>
+]]></content>
+    </entry>
+</feed>
